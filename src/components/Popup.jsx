@@ -33,6 +33,10 @@ const Popup = () => {
                     <p className='title'> Phone number</p>
                     <p className='info'> 08026784895</p>
                 </div>
+                <div className="subject">
+                    <p className='title'> Department</p>
+                    <p className='info'> IT</p>
+                </div>
             </div>
         </div>
     </div>
