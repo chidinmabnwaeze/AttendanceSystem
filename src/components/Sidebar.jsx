@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from '../assets/Logo/ipi Solutions New 1.png'
-// import Dash from '../assets/icons/dashb'
+import Dash from '../assets/icons/dashboard-square-02.svg'
 
 
 const Sidebar = () => {
@@ -20,7 +20,7 @@ const Sidebar = () => {
                     
                     <a id="menu-icon" className="menu-list" href="#">
                         <div className="stroke"> </div>
-                        <img className="menu-icon" src="icons/dashboard-square-02.svg" alt=""/>
+                        <img className="menu-icon" src={Dash}alt=""/>
                         <p>Dashboard</p>
                     </a>
                 </li>
