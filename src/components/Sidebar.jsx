@@ -2,6 +2,7 @@ import React from 'react'
 import Logo from '../assets/Logo/ipi Solutions New 1.png'
 import Dash from '../assets/icons/dashboard-square-02.svg'
 import Timesheet from '../assets/icons/vuesax/linear/calendar.svg'
+import Tasks from '../assets/icons/task-daily-02.svg'
 
 
 const Sidebar = () => {
@@ -35,7 +36,7 @@ const Sidebar = () => {
 
                 <li className="menu-list">
                     <a id="menu-icon" className="menu-list" href="#">
-                        <img className="menu-icon" src="icons/task-daily-02.svg" alt=""/>
+                        <img className="menu-icon" src={Tasks} alt=""/>
                         <p>Tasks</p>
                     </a>
                 </li>
