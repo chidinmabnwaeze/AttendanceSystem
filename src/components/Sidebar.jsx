@@ -4,6 +4,7 @@ import Dash from '../assets/icons/dashboard-square-02.svg'
 import Timesheet from '../assets/icons/vuesax/linear/calendar.svg'
 import Tasks from '../assets/icons/task-daily-02.svg'
 import Payroll from '../assets/icons/invoice-03.svg'
+import Reports from '../assets/icons/waterfall-up-01.svg'
 
 
 const Sidebar = () => {
@@ -53,7 +54,7 @@ const Sidebar = () => {
 
                 <li className="menu-list">
                     <a id="menu-icon" className="menu-list" href="#">
-                        <img className="menu-icon" src="icons/waterfall-up-01.svg" alt=""/>
+                        <img className="menu-icon" src={Reports} alt=""/>
                         <p>Reports</p>
                     </a>
                 </li>
