@@ -62,6 +62,15 @@ const Popup = () => {
     <p>Current Time</p>
     <p>{currentTime.getTime()}</p>
 </div>
+
+<div className="clockInTime">
+<img className="check" src="check" alt="" />
+<img className="check" src="check" alt="" />
+
+
+
+
+</div>
     </div>
   );
 };
