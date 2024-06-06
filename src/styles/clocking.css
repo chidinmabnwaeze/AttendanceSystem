@@ -207,11 +207,13 @@ height: 350px;
     justify-content: space-between;
     box-shadow: 2px 2px 5px rgb(172, 171, 171);
     padding: 7px;
+    border-top-left-radius: 10px;
+border-top-right-radius: 10px;
 }
 .cards{
     display: flex;
     justify-content: space-between;
-    padding: ;
+   
 }
 .user{
     display: flex;
@@ -233,27 +235,43 @@ height: 350px;
     display: flex;
 }
 .currentTime{
-margin: 15px;
+margin: 20px;
 background-color: white;
 display: flex;
 flex-direction: column;
+justify-content: center;
 align-items: center;
 width: 180px;
 height: 240px;
 box-shadow: 2px 2px 5px rgb(172, 171, 171);
 text-align: center;
+border-radius: 10px;
+}
+.cT{
+    color: #004e98;
+    font-weight: 600; 
+    padding: 20px;
 }
 .card3{
-    margin: 15px;
+    margin: 20px;
     background-color: white;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    width: 200px;
+    width: 240px;
     height: 300px;
     box-shadow: 2px 2px 5px rgb(172, 171, 171);
+    border-radius: 10px;
 }
 .dayStatus{
     color: #004e98;
-    margin: 20px;
+ 
+}
+.weekDay{
+    padding: 10px;
+}
+.weekDay h3{
+    color: #004e98;
+    padding-bottom: 8px;
 }

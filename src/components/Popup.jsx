@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Profile from "../assets/images/profile.png";
 import close from "../assets/icons/close.png";
+import check from '../assets/icons/ep_success-filled.png'
 
 const Popup = () => {
   const[ details, setDetails]= useState([
@@ -60,14 +61,14 @@ const Popup = () => {
 
 <div className="currentTime">
     <h3 className="dayStatus">Today</h3>
-    <p>Current Time</p>
+    <p className="cT">Current Time</p>
     <p className="currentDaysTime">{currentTime.getTime()}</p>
 </div>
 
 <div className="card3">
 <div className="clockInTime">
-<img className="check" src="check" alt="" />
-<p>CLOCK-IN <br></br> SUCCESSFUL</p>
+<img className="check" src={check} alt="" />
+<p>CLOCK-IN <br></br> <br /> SUCCESSFUL</p>
 </div>
 
 <div className="weekDay">
