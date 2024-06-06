@@ -34,7 +34,23 @@ const Popup = () => {
         <div className="userDetails">
           {details.map((detail, index) => (
             <div className="userInfo">
-              <div className="subject">
+                <div className="fields">
+                <p className="title"> Name:</p>
+                <p className="title">Card Id:</p>
+                <p className="title"> Email:</p>
+                <p className="title"> Phone number:</p>
+                <p className="title"> Department:</p>
+                </div>
+                <div className="fields">
+                <p className="info"> Sarah Duke</p>
+                <p className="info"> 009867</p>
+                <p className="info"> sarahduke@gmail.com</p>
+                <p className="info"> 08026784895</p>
+                <p className="info"> IT</p>
+                
+                </div>
+
+              {/* <div className="subject">
                 <p className="title"> Name:</p>
                 <p className="info"> Sarah Duke</p>
               </div>
@@ -53,14 +69,14 @@ const Popup = () => {
               <div className="subject">
                 <p className="title"> Department</p>
                 <p className="info"> IT</p>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
       </div>
 
 <div className="currentTime">
-    <h3 className="dayStatus">Today</h3>
+    <h3 className="dayStatus">TODAY</h3>
     <p className="cT">Current Time</p>
     <p className="currentDaysTime">{currentTime.getTime()}</p>
 </div>

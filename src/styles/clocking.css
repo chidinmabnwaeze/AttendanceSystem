@@ -202,20 +202,42 @@ body {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  background-color: purple;
 }
 .profilePic {
-  width: 250px;
-  background-color: red;
+  width: 280px;
+
 }
 .pic {
   width: 250px;
 }
 .jobRole {
   text-align: center;
+  margin-top:8px ;
   color: rgba(168, 168, 168, 1);
+}
+.userDetails{
+   
+  
+}
+.userInfo{
+ 
+    padding: 20px;
+    display: flex;
+    justify-content:space-evenly;
+    
+}
+.fields{
+margin: 5px;
+}
+.fields p{
+padding: 2px
+
 }
 .subject {
   display: flex;
+  flex-direction: column;
+  padding: 5px;
 }
 .currentTime {
   margin: 20px;
