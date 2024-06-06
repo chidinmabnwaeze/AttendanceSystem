@@ -60,16 +60,18 @@ const Popup = () => {
 <div className="currentTime">
     <h3 className="dayStatus">Today</h3>
     <p>Current Time</p>
-    <p>{currentTime.getTime()}</p>
+    <p className="currentDaysTime">{currentTime.getTime()}</p>
 </div>
 
 <div className="clockInTime">
 <img className="check" src="check" alt="" />
-<img className="check" src="check" alt="" />
+<p>CLOCK-IN <br></br> SUCCESSFUL</p>
+</div>
 
-
-
-
+<div className="weekDay">
+  <h3>MONDAY</h3>  
+ <p>June 10, 2024</p>
+ <p className="timeClockedIn">{currentTime.getTime}</p>
 </div>
     </div>
   );
