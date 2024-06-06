@@ -15,6 +15,8 @@ const Popup = () => {
     },
   ]);
 
+  const currentTime = new Date();
+
   return (
     <div className="popup">
       <div className="exit">
@@ -54,6 +56,12 @@ const Popup = () => {
           ))}
         </div>
       </div>
+
+<div className="currentTime">
+    <h3 className="dayStatus">Today</h3>
+    <p>Current Time</p>
+    <p>{currentTime.getTime()}</p>
+</div>
     </div>
   );
 };
