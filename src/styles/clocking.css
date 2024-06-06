@@ -17,8 +17,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: end;
-  
-  
+   
 }
 .header-text {
     margin-right: 20px;
@@ -187,4 +186,74 @@ height: 350px;
     .section1{
         flex-direction: column;
     }
+}
+
+
+
+
+/* popup css*/
+.popup{
+    
+    width: 900px;
+    height: 550px;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: rgba(248, 248, 248, 1);
+    box-shadow: 2px 2px 5px rgb(172, 171, 171);
+    border-radius: 10px;
+}
+.exit{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 2px 2px 5px rgb(172, 171, 171);
+    padding: 7px;
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+    padding: ;
+}
+.user{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.profilePic{
+    width: 250px;
+    background-color: red;
+}
+.pic{
+    width: 250px;
+}
+.jobRole{
+    text-align: center;
+    color: rgba(168, 168, 168, 1);
+}
+.subject{
+    display: flex;
+}
+.currentTime{
+margin: 15px;
+background-color: white;
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 180px;
+height: 240px;
+box-shadow: 2px 2px 5px rgb(172, 171, 171);
+text-align: center;
+}
+.card3{
+    margin: 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+    box-shadow: 2px 2px 5px rgb(172, 171, 171);
+}
+.dayStatus{
+    color: #004e98;
+    margin: 20px;
 }

@@ -23,6 +23,7 @@ const Popup = () => {
         <p className="clockInText">Clock in</p>
         <img src={close} alt="" />
       </div>
+      <div className="cards">
       <div className="user">
         <div className="profilePic">
           <img className="pic" src={Profile} alt="" />
@@ -63,6 +64,7 @@ const Popup = () => {
     <p className="currentDaysTime">{currentTime.getTime()}</p>
 </div>
 
+<div className="card3">
 <div className="clockInTime">
 <img className="check" src="check" alt="" />
 <p>CLOCK-IN <br></br> SUCCESSFUL</p>
@@ -73,6 +75,8 @@ const Popup = () => {
  <p>June 10, 2024</p>
  <p className="timeClockedIn">{currentTime.getTime}</p>
 </div>
+    </div>
+    </div>
     </div>
   );
 };
