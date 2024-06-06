@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Profile from "../assets/images/profile.png";
 import close from "../assets/icons/close.png";
 
 const Popup = () => {
-  const details = [
+  const[ details, setDetails]= useState([
     {
       title: "Name:",
       name: "Sarah Duke",
@@ -13,7 +13,7 @@ const Popup = () => {
       phoneNumber: "08026784895",
       department: "IT",
     },
-  ];
+  ]);
 
   return (
     <div className="popup">
