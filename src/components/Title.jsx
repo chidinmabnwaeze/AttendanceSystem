@@ -10,21 +10,21 @@ const Title = () => {
 
       <div className="statusHead">
         <div className="status">
-          <p className="clockIn">Clocked in</p>
-          <p className="clockLate">Clocked late</p>
-          <p className="offToday">Off Today</p>
+          <a className="clockIn" href="../Pages/clocking.jsx">Clocked in</a>
+          <a className="clockLate" href="../Pages/clocking.jsx">Clocked late</a>
+          <a className="offToday" href="../Pages/clocking.jsx">Off Today</a>
         </div>
 
         <div className="right">
           <button className="filterButton">
             <img className="filter" src={Filter} alt="" />
           </button>
-          <input type="searchbox" placeholder="Card ID, Role or Staff name" />
+          <input className= 'input' type="searchbox" placeholder="Card ID, Role or Staff name" />
           <img className="search-icon" src={search} alt="" />
         </div>
-        <hr />
+       
       </div>
-
+      <hr />
     </div>
   );
 };
