@@ -25,16 +25,6 @@ const Title = () => {
         <hr />
       </div>
 
-      <table>
-        <tr>
-          <th>Staff Name</th>
-          <th>Card ID </th>
-          <th>Email Address </th>
-          <th>Role</th>
-          <th>Status </th>
-          <th>Date </th>
-        </tr>
-      </table>
     </div>
   );
 };
