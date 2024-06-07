@@ -4,6 +4,7 @@ import './styles/clocking.css'
 import Clocking from './Pages/clocking'
 import Timesheet from './Pages/Timesheet'
 import Popup from './components/Popup'
+import Leave from './Pages/leave'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Route path='/clocking' element ={<Clocking/>}/>
       <Route path='/popup' element ={<Popup/>}/>
       <Route path='/timesheet' element ={<Timesheet/>}/>
+      <Route path='/leave' element ={<Leave/>}/>
      </Routes>
      </BrowserRouter>
     </>
