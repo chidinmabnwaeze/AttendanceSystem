@@ -164,9 +164,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* justify-content: space-evenly; */
-
-  /* background-color: purple; */
+  
 }
 
 /* responsiveness */
@@ -202,7 +200,6 @@ body {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  background-color: purple;
 }
 .profilePic {
   width: 280px;
@@ -216,10 +213,10 @@ body {
   margin-top:8px ;
   color: rgba(168, 168, 168, 1);
 }
-.userDetails{
+/* .userDetails{
    
   
-}
+} */
 .userInfo{
  
     padding: 20px;
