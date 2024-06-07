@@ -3,8 +3,8 @@ import React from 'react'
 const Table = () => {
   return (
     <div>
-         <table>
-        <tr>
+         <table className='staffTable'>
+        <tr className='table-head'>
           <th>Staff Name</th>
           <th>Card ID </th>
           <th>Email Address </th>
