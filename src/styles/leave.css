@@ -1,0 +1,14 @@
+.form-border{
+    background-color: white;
+    border: 1px solid;
+}
+.name{
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+
+}
+.staff{
+    display: flex;
+    flex-direction: column;
+}
