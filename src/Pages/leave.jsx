@@ -49,13 +49,13 @@ const leave = () => {
           </label>
         </div>
 
-      </form>
-
-      <div className="button">
+        <div className="formButtons">
     <button className="cancel">Cancel</button>
     <button className="approve">Approve Leave</button>
     </div>
-    </div>
+    
+      </form>
+      </div>
 
     </div>
   );
