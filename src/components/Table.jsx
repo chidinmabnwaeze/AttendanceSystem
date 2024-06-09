@@ -7,69 +7,57 @@ const Table = () => {
       img: userpic,
       name: "Julius Gabriel",
       id: 23476,
-      email:"example@gmail.com",
-      role:"Frontend developer",
-      status:"Clocked in",
-      date: "2024"
-
+      email: "example@gmail.com",
+      role: "Frontend developer",
+      status: "Clocked in",
+      date: "2024-06-09",
     },
     {
       img: userpic,
       name: "Julius Gabriel",
       id: 23476,
-      email:"example@gmail.com",
-      role:"Frontend developer",
-      status:"Clocked in",
-      date: "2024"
-
+      email: "example@gmail.com",
+      role: "Frontend developer",
+      status: "Clocked in",
+      date: "2024-06-09",
     },
-
-
 
     {
       img: userpic,
       name: "Julius Gabriel",
       id: 23476,
-      email:"example@gmail.com",
-      role:"Frontend developer",
-      status:"Clocked in",
-      date: "2024"
-
+      email: "example@gmail.com",
+      role: "Frontend developer",
+      status: "Clocked in",
+      date: "2024-06-09",
     },
     {
       img: userpic,
       name: "Julius Gabriel",
       id: 23476,
-      email:"example@gmail.com",
-      role:"Frontend developer",
-      status:"Clocked in",
-      date: "2024"
-
+      email: "example@gmail.com",
+      role: "Frontend developer",
+      status: "Clocked in",
+      date: "2024-06-09",
     },
     {
       img: userpic,
       name: "Julius Gabriel",
       id: 23476,
-      email:"example@gmail.com",
-      role:"Frontend developer",
-      status:"Clocked in",
-      date: "2024"
-
+      email: "example@gmail.com",
+      role: "Frontend developer",
+      status: "Clocked in",
+      date: "2024-06-09",
     },
     {
       img: userpic,
       name: "Julius Gabriel",
       id: 23476,
-      email:"example@gmail.com",
-      role:"Frontend developer",
-      status:"Clocked in",
-      date: "2024"
-
-    },
-
-
-
-
+      email: "example@gmail.com",
+      role: "Frontend developer",
+      status: "Clocked in",
+      date: "2024-06-09",
+    }
   ];
   return (
     <div>
@@ -84,8 +72,7 @@ const Table = () => {
         </tr>
 
         {tab.map((tabb, index) => (
-          <tr key={index}>
-            
+          <tr className="rows" key={index}>
             <td className="staff-name">
               <span className="tt">
                 <img className="userpic" src={tabb.img} alt="" />
@@ -99,8 +86,8 @@ const Table = () => {
               <div className="clockedStatus">
                 <span className="stat">
                   <div className="circle"></div>
-                 
-                 {tabb.status}
+
+                  {tabb.status}
                 </span>
               </div>
             </td>

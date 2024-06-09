@@ -6,39 +6,33 @@ import Clock from "../assets/images/Chronometer.png";
 import rafiki from "../assets/images/rafiki.png";
 
 const clocking = () => {
-  const clock = new Date().toLocaleTimeString("en-NG", {hour12 : true});
+  const clock = new Date().toLocaleTimeString("en-NG", { hour12: true });
 
-  console.log(clock)
+  console.log(clock);
   const [currentTime, setCurrentTime] = useState(clock);
 
-
   const updateCurrentTime = () => {
-    const clock = new Date().toLocaleTimeString("en-NG", {hour12 : true});
+    const clock = new Date().toLocaleTimeString("en-NG", { hour12: true });
     setCurrentTime(clock);
   };
 
-
   setInterval(updateCurrentTime, 1000);
 
+  //   useEffect(() =>{
+  //     const interval =
 
+  //     return() =>{
+  //         clearInterval(interval);
+  //     }
+  //   }, [])
 
-//   useEffect(() =>{
-//     const interval = 
-   
+  function timeFormat() {
+    let hours = currentTime.getHours();
+    let minutes = currentTime.getMinutes();
+    let seconds = currentTime.getSeconds();
+    const meridiem = hours < 12 ? "AM" : "PM";
 
-//     return() =>{
-//         clearInterval(interval);
-//     }
-//   }, [])
-   
-
-  function timeFormat(){
-  let hours =currentTime.getHours();
-  let minutes =currentTime.getMinutes();
-  let seconds =currentTime.getSeconds();
-  const meridiem = hours <12 ? "AM" : "PM";
-
-  return( `${hours} ${minutes}`)
+    return `${hours} ${minutes}`;
   }
 
   return (
