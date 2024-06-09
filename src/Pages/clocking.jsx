@@ -6,14 +6,17 @@ import Clock from "../assets/images/Chronometer.png";
 import rafiki from "../assets/images/rafiki.png";
 
 const clocking = () => {
-  const clock = new Date().toLocaleTimeString();
+  const clock = new Date().toLocaleTimeString("en-NG", {hour12 : true});
+
+  console.log(clock)
   const [currentTime, setCurrentTime] = useState(clock);
 
 
   const updateCurrentTime = () => {
-    const clock = new Date().toLocaleTimeString();
+    const clock = new Date().toLocaleTimeString("en-NG", {hour12 : true});
     setCurrentTime(clock);
   };
+
 
   setInterval(updateCurrentTime, 1000);
 
@@ -62,19 +65,19 @@ const clocking = () => {
 
           <div className="timebuttons">
             <button className="time">
-              <h4 id="hrs">{currentTime}:</h4>
+              <h4 id="hrs">{currentTime.split(":")[0]}</h4>
               <p>Hours</p>
             </button>
             <button className="time">
-              <h4 id="mins">08 :</h4>
+              <h4 id="mins">{currentTime.split(":")[1]}</h4>
               <p>Minutes</p>
             </button>
             <button className="time">
-              <h4 id="secs">08 :</h4>
+              <h4 id="secs">{currentTime.split(":")[2].split(" ")[0]}</h4>
               <p>Seconds</p>
             </button>
             <button className="time">
-              <h4 id="am">AM</h4>
+              <h4 id="am">{currentTime.split(" ")[1].toUpperCase()}</h4>
             </button>
 
             <div className="dateStamp">

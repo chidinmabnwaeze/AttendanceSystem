@@ -2,6 +2,75 @@ import React from "react";
 import userpic from "../assets/images/profile.png";
 
 const Table = () => {
+  const tab = [
+    {
+      img: userpic,
+      name: "Julius Gabriel",
+      id: 23476,
+      email:"example@gmail.com",
+      role:"Frontend developer",
+      status:"Clocked in",
+      date: "2024"
+
+    },
+    {
+      img: userpic,
+      name: "Julius Gabriel",
+      id: 23476,
+      email:"example@gmail.com",
+      role:"Frontend developer",
+      status:"Clocked in",
+      date: "2024"
+
+    },
+
+
+
+    {
+      img: userpic,
+      name: "Julius Gabriel",
+      id: 23476,
+      email:"example@gmail.com",
+      role:"Frontend developer",
+      status:"Clocked in",
+      date: "2024"
+
+    },
+    {
+      img: userpic,
+      name: "Julius Gabriel",
+      id: 23476,
+      email:"example@gmail.com",
+      role:"Frontend developer",
+      status:"Clocked in",
+      date: "2024"
+
+    },
+    {
+      img: userpic,
+      name: "Julius Gabriel",
+      id: 23476,
+      email:"example@gmail.com",
+      role:"Frontend developer",
+      status:"Clocked in",
+      date: "2024"
+
+    },
+    {
+      img: userpic,
+      name: "Julius Gabriel",
+      id: 23476,
+      email:"example@gmail.com",
+      role:"Frontend developer",
+      status:"Clocked in",
+      date: "2024"
+
+    },
+
+
+
+
+  ];
   return (
     <div>
       <table className="staffTable">
@@ -14,26 +83,30 @@ const Table = () => {
           <th>Date </th>
         </tr>
 
-        <tr>
-          <td className="staff-name">
-            <span className="tt">
-              <img className="userpic" src={userpic} alt="" />
-              Julius Gabriel
-            </span>
-          </td>
-          <td>23476</td>
-          <td>example@gmail.com</td>
-          <td>Frontend developer</td>
-          <td className="staff-status">
-            <div className="clockedStatus">
-              <span className="stat">
-                <div className="circle"></div>
-                Clocked in
+        {tab.map((tabb, index) => (
+          <tr key={index}>
+            
+            <td className="staff-name">
+              <span className="tt">
+                <img className="userpic" src={tabb.img} alt="" />
+                {tabb.name}
               </span>
-            </div>
-          </td>
-          <td>2024</td>
-        </tr>
+            </td>
+            <td>{tabb.id}</td>
+            <td>{tabb.email}</td>
+            <td>{tabb.role}</td>
+            <td className="staff-status">
+              <div className="clockedStatus">
+                <span className="stat">
+                  <div className="circle"></div>
+                 
+                 {tabb.status}
+                </span>
+              </div>
+            </td>
+            <td>{tabb.date}</td>
+          </tr>
+        ))}
       </table>
     </div>
   );

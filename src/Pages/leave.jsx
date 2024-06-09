@@ -11,12 +11,10 @@ const leave = () => {
   return (
     <div>
       <Header />
-      <Sidebar 
-     
-      />
+      <Sidebar/>
       <Title text={text} 
-       apply={apply}
-       onLeave ={onLeave}/>
+       sub={apply}
+      sub1 ={onLeave}/>
 
       <div className="form-border">
         <form action="">
@@ -44,10 +42,10 @@ const leave = () => {
           <div className="name">
             <label className="staff" htmlFor="name">
               Description
-              <input
+              <textarea
                 type="textarea"
                 placeholder="Describe your leave"
-                textarea=""
+                textarea name="leaveDescription" id="staff" rows={10} cols={80}
               />
             </label>
           </div>
@@ -56,9 +54,8 @@ const leave = () => {
             <label className="staff" htmlFor="name">
               Leave duration
               <input
-                type="textarea"
-                placeholder="Describe your leave"
-                textarea=""
+                type="text"
+               
               />
             </label>
           </div>

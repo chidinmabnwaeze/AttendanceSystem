@@ -32,6 +32,9 @@
    border: 1px solid rgb(209, 208, 208);
 
 }
+.textarea{
+    border: 1px solid rgb(209, 208, 208);
+}
 .search-icon{
     position: absolute;
    right: 0;
@@ -90,7 +93,7 @@ margin: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+  
     background-color: red;
   
 }

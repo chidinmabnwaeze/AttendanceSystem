@@ -1,7 +1,7 @@
 import React from "react";
 import search from "../assets/icons/Component 248.png";
 import Filter from "../assets/icons/funnel.png";
-const Title = ({text, apply}) => {
+const Title = ({text, sub ,sub1 ,sub2}) => {
   return (
     <div className="Title">
       <div className="titleHead">
@@ -10,9 +10,9 @@ const Title = ({text, apply}) => {
 
       <div className="statusHead">
         <div className="status">
-          <a className="clockIn" href="../Pages/clocking.jsx">{apply}</a>
-          <a className="clockLate" href="../Pages/clocking.jsx">Clocked late</a>
-          <a className="offToday" href="../Pages/clocking.jsx">Off Today</a>
+          <a className="clockIn" href="../Pages/clocking.jsx">{sub}</a>
+          <a className="clockLate" href="../Pages/clocking.jsx">{sub1}</a>
+          <a className="offToday" href="../Pages/clocking.jsx">{sub2}</a>
         </div>
 
         <div className="right">
