@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import Scan from '../assets/images/card scanner img.png'
@@ -9,7 +9,14 @@ import rafiki from '../assets/images/rafiki.png'
 
 const clocking = () => { 
 
-    const date = new Date()
+    const clock = new Date().toLocaleTimeString();
+    const [currentTime , setCurrentTime] = useState(clock);
+
+const updateCurrentTime = () =>{
+    const clock =new Date().toLocaleTimeString();
+    setCurrentTime(clock);
+}
+setInterval(updateCurrentTime,1000)
 
   return (
         <main>
@@ -37,7 +44,7 @@ const clocking = () => {
 
                 <div className="timebuttons">
                     <button className="time">
-                        <h4 id="hrs">08 :</h4>
+                        <h4 id="hrs">{currentTime}:</h4>
                         <p>Hours</p>
                     </button>
                     <button className="time">
