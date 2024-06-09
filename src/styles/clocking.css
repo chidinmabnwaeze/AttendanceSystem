@@ -172,6 +172,9 @@ body {
   .section1 {
     flex-direction: column;
   }
+  .timebuttons{
+    width: 400px;
+  }
 }
 
 /* popup css*/
