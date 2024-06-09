@@ -1,16 +1,16 @@
 import React from "react";
 import search from "../assets/icons/Component 248.png";
 import Filter from "../assets/icons/funnel.png";
-const Title = () => {
+const Title = ({text, apply}) => {
   return (
     <div className="Title">
       <div className="titleHead">
-        <h1>Timesheet</h1>
+        <h1>{text}</h1>
       </div>
 
       <div className="statusHead">
         <div className="status">
-          <a className="clockIn" href="../Pages/clocking.jsx">Clocked in</a>
+          <a className="clockIn" href="../Pages/clocking.jsx">{apply}</a>
           <a className="clockLate" href="../Pages/clocking.jsx">Clocked late</a>
           <a className="offToday" href="../Pages/clocking.jsx">Off Today</a>
         </div>

@@ -57,14 +57,14 @@ body {
   font-weight: 450;
   display: flex;
 }
-.menu ul :hover {
+.menu ul :hover, .active {
   background-color: #ebebeb;
   color: #004e98;
 }
-.menu-icon img :hover {
+/* .menu-icon img :hover {
   background-color: #ebebeb;
   color: #004e98;
-}
+} */
 
 .menu-list p {
   margin-left: 10px;
