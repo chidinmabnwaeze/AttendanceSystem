@@ -5,6 +5,7 @@ import Timesheet from '../assets/icons/vuesax/linear/calendar.svg'
 import Tasks from '../assets/icons/task-daily-02.svg'
 import Payroll from '../assets/icons/invoice-03.svg'
 import Reports from '../assets/icons/waterfall-up-01.svg'
+import leaveIcon from '../assets/icons/leave-user.png'
 
 
 const Sidebar = () => {
@@ -30,9 +31,16 @@ const Sidebar = () => {
                 </li>
 
                 <li className="menu-list">
-                    <a id="menu-icon" className="menu-list" href="#">
+                    <a id="menu-icon" className="menu-list" href="../timesheet">
                         <img className="menu-icon" src={Timesheet}alt=""/>
                         <p>Timesheet</p>
+                    </a>
+                </li>
+
+                <li className="menu-list">
+                    <a id="menu-icon" className="menu-list" href="../leave">
+                        <img className="menu-icon" src={leaveIcon}alt=""/>
+                        <p>Leave</p>
                     </a>
                 </li>
 

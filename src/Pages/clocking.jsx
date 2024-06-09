@@ -17,7 +17,7 @@ const clocking = () => {
 
   setInterval(updateCurrentTime, 1000);
 
-  
+
 
 //   useEffect(() =>{
 //     const interval = 
@@ -29,14 +29,15 @@ const clocking = () => {
 //   }, [])
    
 
-//   function timeFormat(){
-//   let hours =currentTime.getHours();
-//   let minutes =currentTime.getMinutes();
-//   let seconds =currentTime.getSeconds();
-//   const meridiem = hours <12 ? "AM" : "PM";
+  function timeFormat(){
+  let hours =currentTime.getHours();
+  let minutes =currentTime.getMinutes();
+  let seconds =currentTime.getSeconds();
+  const meridiem = hours <12 ? "AM" : "PM";
 
-//   return( `${hours} ${minutes}`)
-//   }
+  return( `${hours} ${minutes}`)
+  }
+
   return (
     <main>
       <Header />
@@ -77,7 +78,7 @@ const clocking = () => {
             </button>
 
             <div className="dateStamp">
-              <h4>{}</h4>
+              <h4 className="date">9th July, 2024</h4>
             </div>
           </div>
         </section>

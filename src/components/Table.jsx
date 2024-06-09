@@ -1,4 +1,5 @@
 import React from 'react'
+import userpic from '../assets/images/profile.png'
 
 const Table = () => {
   return (
@@ -13,17 +14,26 @@ const Table = () => {
           <th>Date </th>
         </tr>
 
-        <tr>
-            <td>
-                <img className='userpic' src="" alt="" />
-                Julius Gabriel
+        <tr >
+            <td className='staff'>
+                <span className='tt'>
+                <img className='userpic' src={userpic} alt="" />
+               Julius Gabriel
+                </span>
             </td>
             <td>23476</td>
             <td>example@gmail.com</td>
             <td>Frontend developer</td>
-            <td>Clocked in</td>
+            <td className='status'> 
+            <div className='clockedStatus'>
+                <span className='stat'>
+                    <div className='circle'></div>
+                    Clocked in</span> 
+                    </div>
+                    </td>
             <td>2024</td>
         </tr>
+        
       </table>
     </div>
   )
