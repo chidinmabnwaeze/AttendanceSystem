@@ -29,6 +29,20 @@ const staffSchedule = () => {
           </div>
           </div>
         </div>
+
+        <table className="calendar">
+<tr>
+    <th> Date</th>
+</tr>
+
+            <tr colspan ="7">
+                <td>Monday, 2 July</td>
+                <td>7:40 am</td>
+                <td></td>
+                
+            </tr>
+
+        </table>
       </div>
     </div>
   );

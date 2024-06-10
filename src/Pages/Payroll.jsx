@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import Title from '../components/Title'
+import StaffSchedule from '../components/staffSchedule'
 
 const Payroll = () => {
     const text = "Payroll"
@@ -16,6 +17,7 @@ const Payroll = () => {
       sub={sub}
       sub1={sub1}
       />
+      <StaffSchedule/>
 
     </div>
   )
