@@ -61,8 +61,8 @@ const Table = () => {
   ];
   return (
     <div>
-      <table className="staffTable">
-        <tr className="table-head">
+      <table className="staffTable" cellspacing = "0" cellpadding="0">
+        <tr className="table-head" >
           <th>Staff Name</th>
           <th>Card ID </th>
           <th>Email Address </th>
