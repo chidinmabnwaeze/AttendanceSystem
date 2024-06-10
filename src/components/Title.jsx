@@ -10,7 +10,7 @@ const Title = ({text, sub ,sub1 ,sub2}) => {
 
       <div className="statusHead">
         <div className="status">
-          <a className="clockIn" href="../Pages/clocking.jsx">{sub}</a>
+          <a className="clockIn" href="../timesheet">{sub}</a>
           <a className="clockLate" href="../Pages/clocking.jsx">{sub1}</a>
           <a className="offToday" href="../Pages/clocking.jsx">{sub2}</a>
         </div>
