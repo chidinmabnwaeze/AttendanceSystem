@@ -18,6 +18,8 @@ const clocking = () => {
 
   setInterval(updateCurrentTime, 1000);
 
+  const date =new Date().toDateString()
+
   //   useEffect(() =>{
   //     const interval =
 
@@ -75,7 +77,7 @@ const clocking = () => {
             </button>
 
             <div className="dateStamp">
-              <h4 className="date">9th July, 2024</h4>
+              <h4 className="date">{date}</h4>
             </div>
           </div>
         </section>
