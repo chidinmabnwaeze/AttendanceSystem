@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
 const staffSchedule = () => {
+
+    const Schedule = useState([
+        {
+            date : "Monday, 2 July",
+            clockInTime : "7:40am",
+            lunchBreak : " ",
+            clockOutTime : " " ,
+
+        }
+    ])
+
+
   return (
     <div className="staffSchedule">
       <div className="schedule-staff">
@@ -32,16 +44,24 @@ const staffSchedule = () => {
 
         <table className="calendar">
 <tr>
-    <th> Date</th>
+    <th className="payroll-tableHead"> Date</th>
+    <th className="payroll-tableHead"> Clock in Time</th>
+    <th className="payroll-tableHead"> Lunch Break</th>
+    <th className="payroll-tableHead"> Clock Out Time</th>
+    <th className="payroll-tableHead"> Off Today</th>
 </tr>
 
-            <tr colspan ="7">
-                <td>Monday, 2 July</td>
-                <td>7:40 am</td>
-                <td></td>
-                
-            </tr>
+{Schedule.map((schedule , index)=>(
+ <tr colspan ="7" key={index}>
+ <td>Monday, 2 July</td>
+ <td>7:40 am</td>
+ <td></td>
+ <td></td>
+ <td>check</td>
+</tr>
 
+))}
+           
         </table>
       </div>
     </div>
