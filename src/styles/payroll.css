@@ -33,6 +33,7 @@ td{
 th{
     border: none;
     margin: 20px;
+  
     
     
 }
@@ -43,6 +44,7 @@ th{
     background-color: rgba(205, 220, 251, 1);
    margin-right: 20px;
    padding: 10px;
+   gap: 10px;
 
 }
 .payroll-lunchBreak{
@@ -56,3 +58,14 @@ background-color: rgba(211, 251, 205, 1);
 background-color: rgba(217, 217, 217, 1);
 }
 
+.scroll{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    width: 30px;
+    height: 200px;
+    background-color: white;
+    box-shadow: 2px 2px 4px grey;
+    border-radius: 10px;
+}

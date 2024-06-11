@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../styles/payroll.css"
+import arrowUp from "../assets/icons/arrow-up.svg"
+import arrowDown from "../assets/icons/arrow-down.svg"
 
 const staffSchedule = () => {
 
@@ -39,26 +41,6 @@ const staffSchedule = () => {
       <div className="scheduleSheet">
         <h4 className="month">July</h4>
 
-        {/* <div className="scheduleLinks">
-          <div className="date">
-            <p className="presentDays">Date</p>
-          </div>
-          <div className="links">
-          <div className="clockInTime">
-            <p>Clock in Time</p>
-          </div>
-          <div className="lunch-break">
-            <p>Lunch break</p>
-          </div>
-          <div className="clockOutTime">
-            <p>Clock Out Time</p>
-          </div>
-          <div className="offToday">
-            <p>Off Today</p>
-          </div>
-          </div>
-        </div> */}
-
         <table className="calendar">
 <tr cellspacing ="3px">
     <th className="payroll-date"> Date</th>
@@ -80,6 +62,13 @@ const staffSchedule = () => {
 ))}
            
         </table>
+      </div>
+
+
+      {/* scrollbar */}
+      <div className="scroll">
+        <img src={arrowUp} alt="" />
+        <img src={arrowDown}alt="" />
       </div>
     </div>
   );
