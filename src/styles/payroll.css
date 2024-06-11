@@ -12,6 +12,7 @@ margin-right: 10px;
 }
 .schedule-sheet{
 display: flex;
+
 }
 .calendar, th, .payClass{
     border: 1px solid grey;
@@ -22,8 +23,12 @@ display: flex;
 td{
     padding: 20px; 
 }
+.calendar-div{
+    
+    width: 90%;
+}
 .calendar{
-    width: 100%;
+    width: 80%;
     margin: 25px;
     border-top: none;
     border-left: none;
@@ -34,8 +39,6 @@ th{
     border: none;
     margin: 20px;
   
-    
-    
 }
 .payroll-date{
 
@@ -64,8 +67,14 @@ background-color: rgba(217, 217, 217, 1);
     justify-content: space-between;
     align-items: left;
     width: 30px;
-    height: 200px;
+    height: 400px;
     background-color: white;
     box-shadow: 2px 2px 4px grey;
     border-radius: 10px;
+}
+.schedule-heading{
+    margin:20px
+}
+.up , .down{
+    border: none;
 }

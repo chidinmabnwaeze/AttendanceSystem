@@ -41,34 +41,37 @@ const staffSchedule = () => {
         </div>
       </div>
 
-      <div className="schedulesheet">
-      <table className="calendar">
-        <tr cellspacing="3px">
-          <th className="payroll-date"> Date</th>
-          <th className="payroll-clockIn"> Clock in Time</th>
-          <th className="payroll-lunchBreak" cellspacing="4">
-            Lunch Break
-          </th>
-          <th className="payroll-clockOut"> Clock Out Time</th>
-          <th className="payroll-off"> Off Today</th>
-        </tr>
+      <div className="schedule-sheet">
+        <div className="scroll">
+         <button className="up"><img src={arrowUp} alt="" /></button> 
+          <button className="down"><img src={arrowDown} alt="" /></button>
+        </div>
 
-        {Schedule.map((schedule, index) => (
-          <tr colspan="7" key={index}>
-            <td className="payClass">{schedule.date}</td>
-            <td className="payClass">{schedule.clockInTime}</td>
-            <td className="payClass">{schedule.lunchBreak}</td>
-            <td className="payClass">{schedule.clockOutTime}</td>
-            <td className="payClass">{schedule.offToday}</td>
-          </tr>
-        ))}
-      </table>
+        <div className="calendar-div">
+          <table className="calendar">
+            <tr cellspacing="3px">
+              <th className="payroll-date"> Date</th>
+              <th className="payroll-clockIn"> Clock in Time</th>
+              <th className="payroll-lunchBreak" cellspacing="4">
+                Lunch Break
+              </th>
+              <th className="payroll-clockOut"> Clock Out Time</th>
+              <th className="payroll-off"> Off Today</th>
+            </tr>
 
-      {/* scrollbar */}
-      <div className="scroll">
-        <img src={arrowUp} alt="" />
-        <img src={arrowDown} alt="" />
-      </div>
+            {Schedule.map((schedule, index) => (
+              <tr colspan="7" key={index}>
+                <td className="payClass">{schedule.date}</td>
+                <td className="payClass">{schedule.clockInTime}</td>
+                <td className="payClass">{schedule.lunchBreak}</td>
+                <td className="payClass">{schedule.clockOutTime}</td>
+                <td className="payClass">{schedule.offToday}</td>
+              </tr>
+            ))}
+          </table>
+
+          {/* scrollbar */}
+        </div>
       </div>
     </div>
   );

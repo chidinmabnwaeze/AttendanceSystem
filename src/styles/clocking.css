@@ -62,8 +62,10 @@ body {
   color: #004e98;
 }
 
-menu ul .active{
+
+.menu ul :active{
   border-left: #004e98;
+  color: #004e98;
 }
 /* .menu-icon img :hover {
   background-color: #ebebeb;
