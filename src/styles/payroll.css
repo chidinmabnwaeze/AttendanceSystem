@@ -11,7 +11,7 @@ margin-right: 10px;
     font-size: 14px;
 }
 .schedule-sheet{
-
+display: flex;
 }
 .calendar, th, .payClass{
     border: 1px solid grey;
