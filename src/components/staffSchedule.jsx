@@ -60,21 +60,21 @@ const staffSchedule = () => {
         </div> */}
 
         <table className="calendar">
-<tr>
-    <th className="payroll-tableHead"> Date</th>
-    <th className="payroll-tableHead"> Clock in Time</th>
-    <th className="payroll-tableHead"> Lunch Break</th>
-    <th className="payroll-tableHead"> Clock Out Time</th>
-    <th className="payroll-tableHead"> Off Today</th>
+<tr cellspacing ="3px">
+    <th className="payroll-date"> Date</th>
+    <th className="payroll-clockIn"> Clock in Time</th>
+    <th className="payroll-lunchBreak" cellspacing ="4"> Lunch Break</th>
+    <th className="payroll-clockOut"> Clock Out Time</th>
+    <th className="payroll-off"> Off Today</th>
 </tr>
 
 {Schedule.map((schedule , index)=>(
  <tr colspan ="7" key={index}>
- <td>{schedule.date}</td>
- <td>{schedule.clockInTime}</td>
- <td>{schedule.lunchBreak}</td>
- <td>{schedule.clockOutTime}</td>
- <td>{schedule.offToday}</td>
+ <td className="payClass">{schedule.date}</td>
+ <td className="payClass">{schedule.clockInTime}</td>
+ <td className="payClass">{schedule.lunchBreak}</td>
+ <td className="payClass">{schedule.clockOutTime}</td>
+ <td className="payClass">{schedule.offToday}</td>
 </tr>
 
 ))}

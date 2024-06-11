@@ -1,18 +1,58 @@
 .schedule-staff{
     display: flex;
-
+    align-items: center;
+    padding: 20px;
 }
 .userName{
-
+margin-right: 10px;
 }
 .monthSum{
     color: rgba(127, 124, 124, 1);
+    font-size: 14px;
 }
 .schedule-sheet{
 
 }
-.calendar, th, td{
-    border: 2px solid grey;
+.calendar, th, .payClass{
+    border: 1px solid grey;
     border-collapse: collapse;
+   /* padding: 20px; */
 
 }
+td{
+    padding: 20px; 
+}
+.calendar{
+    width: 100%;
+    margin: 25px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  
+}
+th{
+    border: none;
+    margin: 20px;
+    
+    
+}
+.payroll-date{
+
+}
+.payroll-clockIn{
+    background-color: rgba(205, 220, 251, 1);
+   margin-right: 20px;
+   padding: 10px;
+
+}
+.payroll-lunchBreak{
+background-color: rgba(251, 205, 233, 1);
+
+}
+.payroll-clockOut{
+background-color: rgba(211, 251, 205, 1);
+}
+.payroll-off{
+background-color: rgba(217, 217, 217, 1);
+}
+
