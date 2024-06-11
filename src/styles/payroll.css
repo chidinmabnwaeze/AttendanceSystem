@@ -1,3 +1,18 @@
-.calendar{
-    border: 2px solid;
+.schedule-staff{
+    display: flex;
+
+}
+.userName{
+
+}
+.monthSum{
+    color: rgba(127, 124, 124, 1);
+}
+.schedule-sheet{
+
+}
+.calendar, th, td{
+    border: 2px solid grey;
+    border-collapse: collapse;
+
 }

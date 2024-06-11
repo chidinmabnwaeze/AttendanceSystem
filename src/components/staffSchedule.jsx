@@ -1,28 +1,45 @@
 import React, { useState } from "react";
+import "../styles/payroll.css"
 
 const staffSchedule = () => {
 
-    const Schedule = useState([
+    const [Schedule, setSchedule] = useState([
         {
             date : "Monday, 2 July",
             clockInTime : "7:40am",
             lunchBreak : " ",
             clockOutTime : " " ,
-
-        }
+            offToday : " check"
+        },
+        {
+            date : "Monday, 2 July",
+            clockInTime : "7:40am",
+            lunchBreak : " ",
+            clockOutTime : " " ,
+            offToday : " check"
+        },
+        {
+            date : "Monday, 2 July",
+            clockInTime : "7:40am",
+            lunchBreak : " ",
+            clockOutTime : " " ,
+            offToday : " check"
+        },
+        
     ])
 
 
   return (
     <div className="staffSchedule">
       <div className="schedule-staff">
-        <h2>Uche Okey</h2>
+        <h3 className="userName">Uche Okey</h3>
         <p className="monthSum">2/07/2024 -30/09/2024</p>
       </div>
 
       <div className="scheduleSheet">
         <h4 className="month">July</h4>
-        <div className="scheduleLinks">
+
+        {/* <div className="scheduleLinks">
           <div className="date">
             <p className="presentDays">Date</p>
           </div>
@@ -40,7 +57,7 @@ const staffSchedule = () => {
             <p>Off Today</p>
           </div>
           </div>
-        </div>
+        </div> */}
 
         <table className="calendar">
 <tr>
@@ -53,11 +70,11 @@ const staffSchedule = () => {
 
 {Schedule.map((schedule , index)=>(
  <tr colspan ="7" key={index}>
- <td>Monday, 2 July</td>
- <td>7:40 am</td>
- <td></td>
- <td></td>
- <td>check</td>
+ <td>{schedule.date}</td>
+ <td>{schedule.clockInTime}</td>
+ <td>{schedule.lunchBreak}</td>
+ <td>{schedule.clockOutTime}</td>
+ <td>{schedule.offToday}</td>
 </tr>
 
 ))}
