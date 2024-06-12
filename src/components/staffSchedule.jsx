@@ -41,9 +41,7 @@ const staffSchedule = () => {
         </div>
       </div>
 
-      <div className="schedule-sheet"
-      
-      >
+      <div className="schedule-sheet">
         <div className="scroll">
          <button className="up"><img src={arrowUp} alt="" /></button> 
           <button className="down"><img src={arrowDown} alt="" /></button>
@@ -78,4 +76,7 @@ const staffSchedule = () => {
     </div>
   );
 };
+
+
+
 export default staffSchedule;
