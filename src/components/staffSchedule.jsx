@@ -76,6 +76,4 @@ const staffSchedule = () => {
     </div>
   );
 };
-
-
 export default staffSchedule;
