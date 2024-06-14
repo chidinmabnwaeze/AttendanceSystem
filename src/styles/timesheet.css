@@ -1,110 +1,112 @@
-.titleHead{
-    margin: 30px;
-    color: rgba(1, 41, 77, 1);
+.titleHead {
+  margin: 30px;
+  color: rgba(1, 41, 77, 1);
 }
 
-.statusHead{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 30px;
-    position: relative;
-    
+.statusHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 30px;
+  position: relative;
 }
 .status {
-   display: flex;
-   justify-content: space-between;
-    
+  display: flex;
+  justify-content: space-between;
 }
-.status li{
-    margin-right: 40px;
-    color: rgba(130, 130, 130, 1);
-    list-style: none;
+.status li {
+  margin-right: 40px;
+  color: rgba(130, 130, 130, 1);
+  list-style: none;
+  cursor: pointer;
 }
-.status p :active{
-    color: blue;
+.status li:active {
+  color: #004e98;
 }
-.input{
-    width: 300px;
-    height: 45px;
-    margin: 0 20px 0 10px;
-    position: relative;
-   border: 1px solid rgb(209, 208, 208);
-
+.status li::before {
+  color: #004e98;
 }
-.textarea{
-    border: 1px solid rgb(209, 208, 208);
+.status li::after {
+  color: #004e98;
 }
-.search-icon{
-    position: absolute;
-   right: 0;
-    right: 290px;
-    bottom: 7px;
-    margin: 0 auto;
-   
-}::placeholder{
-    padding: 30px;
+.status p:active {
+  color: blue;
 }
-.filterButton{
+.input {
+  width: 300px;
+  height: 45px;
+  margin: 0 20px 0 10px;
+  position: relative;
+  border: 1px solid rgb(209, 208, 208);
+}
+.textarea {
+  border: 1px solid rgb(209, 208, 208);
+}
+.search-icon {
+  position: absolute;
+  right: 0;
+  right: 290px;
+  bottom: 7px;
+  margin: 0 auto;
+}
+::placeholder {
+  padding: 30px;
+}
+.filterButton {
   background-color: white;
-    border: none;
-   
+  border: none;
 }
-.filter{
-    background-color: none;
-   
+.filter {
+  background-color: none;
 }
-.right{
-    display: flex;
-    align-items: center;
+.right {
+  display: flex;
+  align-items: center;
 }
-.staffTable{
-width: 100%;
-padding: 5px;
-margin: 0;
-border-top-left-radius: 10px;
-border-top-right-radius: 10px;
+.staffTable {
+  width: 100%;
+  padding: 5px;
+  margin: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
-.table-head{
-    height: 40px;
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* align-items: center;  */
-    margin: 0;
-    padding: 0;
-    background-color: #004e98;
-    color: white;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border: none;
-    border-collapse: collapse;
+.table-head {
+  height: 40px;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* align-items: center;  */
+  margin: 0;
+  padding: 0;
+  background-color: #004e98;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: none;
+  border-collapse: collapse;
 }
- th{
-   border: none;
-   text-align: left;
-   margin: 0;
-   padding: 0;
-  
+th {
+  border: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
 }
-.rows td{
-    padding: 10px;
+.rows td {
+  padding: 10px;
 }
-.userpic{
-    width: 35px;
-    border-radius: 20px;
-    align-content: left;
+.userpic {
+  width: 35px;
+  border-radius: 20px;
+  align-content: left;
 }
-.staff-name{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-   
+.staff-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-.clockedstatus{
-    background-color: rgba(211, 255, 167, 0.33);
-
+.clockedstatus {
+  background-color: rgba(211, 255, 167, 0.33);
 }
-.stat{
+.stat {
   color: rgba(0, 205, 21, 1);
   display: flex;
   align-items: center;
@@ -112,12 +114,12 @@ border-top-right-radius: 10px;
   background-color: rgba(184, 248, 121, 0.33);
   width: 110px;
 }
-.circle{
- background-color: rgba(0, 205, 21, 1);
- border-radius: 4px;
- width: 9px;
- height: 9px;
- margin-right: 6px;
+.circle {
+  background-color: rgba(0, 205, 21, 1);
+  border-radius: 4px;
+  width: 9px;
+  height: 9px;
+  margin-right: 6px;
 }
 /* .staff-status{
     background-color: blueviolet;
