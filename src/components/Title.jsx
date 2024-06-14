@@ -11,7 +11,7 @@ console.log(toggle)
 
  const updateToggle = (index)=>{
 // setToggle(()=>{index})
-setToggle({index})
+setToggle(index)
 }
 
   return (
@@ -22,9 +22,9 @@ setToggle({index})
 
       <div className="statusHead">
         <div className="status">
-          <li className="clockIn" onClick={()=> updateToggle(1)}>{sub}</li>
-          <li className="clockLate" onClick={()=> updateToggle(2)}>{sub1}</li>
-          <li className="offToday" onClick={()=> updateToggle(3)}>{sub2}</li>
+        <li className={toggle === 1 ? " tab active-tab" : "tab"} onClick={()=> updateToggle(1)}>{sub}</li>
+          <li className={toggle === 2 ? " tab active-tab" : "tab"} onClick={()=> updateToggle(2)}>{sub1}</li>
+          <li className={toggle === 3 ? " tab active-tab" : "tab"} onClick={()=> updateToggle(3)}>{sub2}</li>
         </div>
 
         <div className="right">

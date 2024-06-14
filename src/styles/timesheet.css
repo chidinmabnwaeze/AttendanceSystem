@@ -124,3 +124,10 @@ th {
 /* .staff-status{
     background-color: blueviolet;
 } */
+.active-tab{
+    color: #004e98;
+
+}
+.tab{
+    background-color: red;
+}
