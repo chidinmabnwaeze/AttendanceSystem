@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import search from "../assets/icons/Component 248.png";
 import Filter from "../assets/icons/funnel.png";
+import { useSearchParams } from "react-router-dom";
+
+
 const Title = ({text, sub ,sub1 ,sub2}) => {
+
+const [toggle, setToggle] = useState(1)
+console.log(toggle)
+
+ const updateToggle = ()=>{
+// setToggle(()=>{index})
+console.log('toggled')
+}
+
   return (
     <div className="Title">
       <div className="titleHead">
@@ -10,9 +22,9 @@ const Title = ({text, sub ,sub1 ,sub2}) => {
 
       <div className="statusHead">
         <div className="status">
-          <a className="clockIn" href="../timesheet">{sub}</a>
-          <a className="clockLate" href="../Pages/clocking.jsx">{sub1}</a>
-          <a className="offToday" href="../Pages/clocking.jsx">{sub2}</a>
+          <li className="clockIn" onClick={updateToggle}>{sub}</li>
+          <li className="clockLate" >{sub1}</li>
+          <li className="offToday" >{sub2}</li>
         </div>
 
         <div className="right">
@@ -25,6 +37,11 @@ const Title = ({text, sub ,sub1 ,sub2}) => {
        
       </div>
       <hr />
+
+
+      <div className="content">
+
+      </div>
     </div>
   );
 };

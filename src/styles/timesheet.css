@@ -16,10 +16,10 @@
    justify-content: space-between;
     
 }
-.status a{
+.status li{
     margin-right: 40px;
-    text-decoration: none;
     color: rgba(130, 130, 130, 1);
+    list-style: none;
 }
 .status p :active{
     color: blue;
