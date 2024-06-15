@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import Title from '../components/Title'
 import StaffSchedule from '../components/staffSchedule'
+import Tablist from '../components/Tablist'
 
 const Payroll = () => {
     const text = "Payroll"
@@ -17,6 +18,7 @@ const Payroll = () => {
       sub={sub}
       sub1={sub1}
       />
+      <Tablist/>
       <StaffSchedule/>
 
     </div>

@@ -20,11 +20,11 @@ const Tablist = ({ tabChild, activeTabIndex = 0 }) => {
 
   return (
     <div className="Tablist" role="tabpanel">
-      {tabData.map(() => (
-        <nav className="tab-nav">
+      {tabData.map((data, index) => (
+        <nav className="tab-nav" key={index}>
           <ul className="tab-menu">
             <li className="tab-item" id="1" aria-labelledby="label">
-              <button className="tab-button">Clock-in</button>
+              <button className="tab-button">{data.button}</button>
             </li>
           </ul>
         </nav>
