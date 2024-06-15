@@ -60,12 +60,17 @@ body {
 .menu ul :hover, .active {
   background-color: #ebebeb;
   color: #004e98;
+  border-left: 3px solid #004e98;
+}
+.tab-menu .actives{
+  color: #004e98;
+  border-bottom: 3px solid #004e98;
 }
 
-
 .menu ul :active{
-  border-left: #004e98;
-  color: #004e98;
+  border-left: 4px solid #004e98;
+  color: red;
+transform:translate(2);
 }
 /* .menu-icon img :hover {
   background-color: #ebebeb;
@@ -84,7 +89,7 @@ body {
   float: left;
   position: absolute;
   left: 0;
-  /* display: ; */
+  display: none;
 }
 .stroke:active {
   display: block;

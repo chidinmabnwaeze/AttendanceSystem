@@ -9,6 +9,7 @@ const Payroll = () => {
     const text = "Payroll"
     const sub = "Payroll"
     const sub1 = "Staff Schedule"
+    const content2 =  <StaffSchedule/>
   return (
     <div>
       <Header/>  
@@ -17,9 +18,10 @@ const Payroll = () => {
       text={text}
       sub={sub}
       sub1={sub1}
+      content2={content2}
       />
-      
-      <StaffSchedule/>
+
+     
 
     </div>
   )

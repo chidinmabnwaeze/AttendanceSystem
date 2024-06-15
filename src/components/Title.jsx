@@ -3,7 +3,7 @@ import search from "../assets/icons/Component 248.png";
 import Filter from "../assets/icons/funnel.png";
 import Table from "./Table";
 
-const Title = ({ text, sub, sub1, sub2 ,content }) => {
+const Title = ({ text, sub, sub1, sub2 ,content ,content2 }) => {
   // const [toggle, setToggle] = useState(1);
   // console.log(toggle);
 
@@ -19,7 +19,7 @@ const Title = ({ text, sub, sub1, sub2 ,content }) => {
     },
     {
       button: sub1,
-      content: "this is tab 2 content",
+      content: content2,
     },
     {
       button: sub2,
@@ -64,10 +64,9 @@ const Title = ({ text, sub, sub1, sub2 ,content }) => {
             <ul className="tab-menu">
                 <div className="activeTabIndicator">
               <li
-                className={`${index === tabs && "active"} tab-item ${<hr/>}`}
+                className={`${index === tabs && "actives"} tab-item ${<hr/>}`}
                 onClick={() => setTabs(index)}
               >
-                {/* //  id="1" aria-labelledby="label" */}
                 {data.button}
                 
                 {/* <hr /> */}
