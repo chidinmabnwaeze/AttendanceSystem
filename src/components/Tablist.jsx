@@ -20,14 +20,15 @@ const Tablist = ({ tabChild, activeTabIndex = 0 }) => {
 
   return (
     <div className="Tablist" role="tabpanel">
-      {tab}
-      <nav className="tab-nav">
-        <ul className="tab-menu">
-          <li className="tab-item" id="1" aria-labelledby="label">
-            <button className="tab-button">Clock-in</button>
-          </li>
-        </ul>
-      </nav>
+      {tabData.map(() => (
+        <nav className="tab-nav">
+          <ul className="tab-menu">
+            <li className="tab-item" id="1" aria-labelledby="label">
+              <button className="tab-button">Clock-in</button>
+            </li>
+          </ul>
+        </nav>
+      ))}
     </div>
   );
 };
