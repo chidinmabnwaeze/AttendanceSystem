@@ -10,6 +10,7 @@ const Tablist = ({ tabChild, activeTabIndex = 0 }) => {
     },
     {
       button: "Off Today",
+      content : "this is tab 3 content"
     },
   ];
 
@@ -29,6 +30,14 @@ const Tablist = ({ tabChild, activeTabIndex = 0 }) => {
           </ul>
         </nav>
       ))}
+
+
+      <div className="tabContent">
+        {tabData.map((data, index) =>(
+            <p key= {index}>{data.content}</p>
+        ))}
+        
+      </div>
     </div>
   );
 };
