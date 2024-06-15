@@ -18,7 +18,7 @@ const Payroll = () => {
       sub={sub}
       sub1={sub1}
       />
-      <Tablist/>
+      
       <StaffSchedule/>
 
     </div>

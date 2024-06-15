@@ -3,14 +3,31 @@ import search from "../assets/icons/Component 248.png";
 import Filter from "../assets/icons/funnel.png";
 import Table from "./Table";
 
-const Title = ({ text, sub, sub1, sub2 }) => {
-  const [toggle, setToggle] = useState(1);
-  console.log(toggle);
+const Title = ({ text, sub, sub1, sub2 ,content }) => {
+  // const [toggle, setToggle] = useState(1);
+  // console.log(toggle);
 
-  const updateToggle = (index) => {
-    // setToggle(()=>{index})
-    setToggle(index);
-  };
+  // const updateToggle = (index) => {
+  //   // setToggle(()=>{index})
+  //   setToggle(index);
+  // };
+
+  const tabData = [
+    {
+      button: sub,
+      content: content,
+    },
+    {
+      button: sub1,
+      content: "this is tab 2 content",
+    },
+    {
+      button: sub2,
+      content: <Table />,
+    },
+  ];
+
+  const [tabs, setTabs] = useState(0);
 
   return (
     <div className="Title">
@@ -19,7 +36,7 @@ const Title = ({ text, sub, sub1, sub2 }) => {
       </div>
 
       <div className="statusHead">
-        <div className="status">
+        {/* <div className="status">
           <li
             className={toggle === 1 ? " tab active-tab" : "tab"}
             onClick={() => updateToggle(1)}
@@ -38,7 +55,32 @@ const Title = ({ text, sub, sub1, sub2 }) => {
           >
             {sub2}
           </li>
-        </div>
+        </div> */}
+
+<div className="Tablist" role="tabpanel">
+      <div className="tab-header">
+        {tabData.map((data, index) => (
+          <nav className="tab-nav" key={index}>
+            <ul className="tab-menu">
+                <div className="activeTabIndicator">
+              <li
+                className={`${index === tabs && "active"} tab-item ${<hr/>}`}
+                onClick={() => setTabs(index)}
+              >
+                {/* //  id="1" aria-labelledby="label" */}
+                {data.button}
+                
+                {/* <hr /> */}
+              </li>
+              {/* <span className=""><hr /></span> */}
+              </div>
+            </ul>
+          </nav>
+        ))}
+      </div>
+
+    
+    </div>
 
         <div className="right">
           <button className="filterButton">
@@ -54,6 +96,14 @@ const Title = ({ text, sub, sub1, sub2 }) => {
         </div>
       </div>
       <hr />
+
+      <div className="tabContent">
+        {tabData.map((data, index) => (
+          <p className="tab-content" key={index}>
+            {tabData[tabs].content}
+          </p>
+        ))}
+      </div>
 
       {/* <div className={toggle === 2 ? "content active-tab" : "content"}>
         <Table />

@@ -35,6 +35,7 @@ const Tablist = () => {
               >
                 {/* //  id="1" aria-labelledby="label" */}
                 {data.button}
+                
                 {/* <hr /> */}
               </li>
               {/* <span className=""><hr /></span> */}
