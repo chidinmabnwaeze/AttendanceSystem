@@ -1,4 +1,5 @@
 import React, { Children, useState } from "react";
+import Table from "./Table";
 
 const Tablist = () => {
   const tabData = [
@@ -12,7 +13,7 @@ const Tablist = () => {
     },
     {
       button: "Off Today",
-      content : "this is tab 3 content"
+      content : <Table/>
     },
   ];
 
@@ -29,7 +30,7 @@ const Tablist = () => {
             <li className={`${index === tabs && "active"} tab-item`}
             onClick={() =>setTabs(index)} >
             {/* //  id="1" aria-labelledby="label" */}
-              <button className="tab-button">{data.button}</button>
+              {data.button}
             </li>
           </ul>
         </nav>
@@ -38,7 +39,7 @@ const Tablist = () => {
 
       <div className="tabContent">
         {tabData.map((data, index) =>(
-            <p key= {index}>{data.content}</p>
+            <p className= "tab-content" key= {index}>{tabData[tabs].content}</p>
         ))}
         
       </div>
