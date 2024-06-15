@@ -57,7 +57,12 @@ body {
   font-weight: 450;
   display: flex;
 }
-.menu ul :hover, .active {
+.menu ul :hover{
+  background-color: #ebebeb;
+  color: #004e98;
+ 
+}
+.menu ul .active {
   background-color: #ebebeb;
   color: #004e98;
   border-left: 3px solid #004e98;
