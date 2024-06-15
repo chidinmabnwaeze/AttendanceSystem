@@ -92,6 +92,7 @@ th {
 }
 .rows td {
   padding: 10px;
+  border-bottom: 1px solid rgba(234, 234, 234, 1);
 }
 .userpic {
   width: 35px;
@@ -124,7 +125,7 @@ th {
 /* .staff-status{
     background-color: blueviolet;
 } */
-.active-tab{
+/* .active-tab{
     color: #004e98;
 
 }
@@ -145,4 +146,4 @@ th {
     width: 9px;
     height: 9px;
     margin-right: 6px;
-  }
+  } */
