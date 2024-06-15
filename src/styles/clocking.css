@@ -63,11 +63,11 @@ body {
   border-left: 3px solid #004e98;
 }
 
-.menu ul :active{
+/* .menu ul :active{
   border-left: 4px solid #004e98;
   color: red;
 transform:translate(2);
-}
+} */
 /* .menu-icon img :hover {
   background-color: #ebebeb;
   color: #004e98;
