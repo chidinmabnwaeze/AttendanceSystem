@@ -1,12 +1,14 @@
 import React, { Children, useState } from "react";
 
-const Tablist = ({ tabChild, activeTabIndex = 0 }) => {
+const Tablist = () => {
   const tabData = [
     {
       button: "Clocked In",
+      content : "this is tab 1 content"
     },
     {
       button: "Clocked Out",
+      content : "this is tab 2 content"
     },
     {
       button: "Off Today",
@@ -14,17 +16,19 @@ const Tablist = ({ tabChild, activeTabIndex = 0 }) => {
     },
   ];
 
-  const [tabs, setTabs] = useState(activeTabIndex);
-  const handleTabClick = (index) => {
-    setTabs(index);
-  };
+  const [tabs, setTabs] = useState(0);
+//   const handleTabClick = (index) => {
+//     setTabs(index);
+//   };
 
   return (
     <div className="Tablist" role="tabpanel">
       {tabData.map((data, index) => (
         <nav className="tab-nav" key={index}>
           <ul className="tab-menu">
-            <li className="tab-item" id="1" aria-labelledby="label">
+            <li className={`${index === tabs && "active"} tab-item`}
+            onClick={() =>setTabs(index)} >
+            {/* //  id="1" aria-labelledby="label" */}
               <button className="tab-button">{data.button}</button>
             </li>
           </ul>
