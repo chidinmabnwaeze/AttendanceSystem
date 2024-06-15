@@ -1,18 +1,35 @@
-import React from 'react'
+import React, { Children, useState } from "react";
 
-const Tablist = () => {
+const Tablist = ({ tabChild, activeTabIndex = 0 }) => {
+  const tabData = [
+    {
+      button: "Clocked In",
+    },
+    {
+      button: "Clocked Out",
+    },
+    {
+      button: "Off Today",
+    },
+  ];
+
+  const [tabs, setTabs] = useState(activeTabIndex);
+  const handleTabClick = (index) => {
+    setTabs(index);
+  };
+
   return (
-    <div className='Tablist'>
-       <nav className='tab-nav'>
-        <ul className='tab-menu'>
-            <li className='tab-item'>
-                <button className='tab-button'>Clock-in</button>
-            </li>
-
+    <div className="Tablist" role="tabpanel">
+      {tab}
+      <nav className="tab-nav">
+        <ul className="tab-menu">
+          <li className="tab-item" id="1" aria-labelledby="label">
+            <button className="tab-button">Clock-in</button>
+          </li>
         </ul>
-        </nav> 
+      </nav>
     </div>
-  )
-}
+  );
+};
 
-export default Tablist
+export default Tablist;
