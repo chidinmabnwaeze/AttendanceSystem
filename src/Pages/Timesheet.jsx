@@ -9,7 +9,8 @@ const Timesheet = () => {
   const text = "Timesheet";
   const sub ="Clocked in";
   const sub1 ="Clocked late";
-  const sub2 = "Off Today"
+  const sub2 = "Off Today";
+  const notclocked =""
 
   return (
     <div>

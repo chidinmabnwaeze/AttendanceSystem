@@ -1,5 +1,6 @@
 import React from "react";
 import userpic from "../assets/images/profile.png";
+import notclocked from "./notclocked";
 
 const Table = () => {
   const tab = [
@@ -9,7 +10,7 @@ const Table = () => {
       id: 23476,
       email: "example@gmail.com",
       role: "Frontend developer",
-      status: "Clocked in",
+      status: notclocked,
       date: "2024-06-09",
     },
     {

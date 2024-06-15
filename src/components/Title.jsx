@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import search from "../assets/icons/Component 248.png";
 import Filter from "../assets/icons/funnel.png";
-import { useSearchParams } from "react-router-dom";
+import Table from "./Table";
 
 
 const Title = ({text, sub ,sub1 ,sub2}) => {
@@ -40,7 +40,7 @@ setToggle(index)
 
 
       <div className="content">
-
+<Table/>
       </div>
     </div>
   );

@@ -131,3 +131,18 @@ th {
 .tab{
     background-color: red;
 }
+.stats {
+    color: rgb(205, 14, 0);
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    background-color: rgba(184, 248, 121, 0.33);
+    width: 110px;
+  }
+  .circle-not {
+    background-color: rgb(243, 162, 130);
+    border-radius: 4px;
+    width: 9px;
+    height: 9px;
+    margin-right: 6px;
+  }
