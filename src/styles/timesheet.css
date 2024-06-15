@@ -147,3 +147,17 @@ th {
     height: 9px;
     margin-right: 6px;
   } */
+
+  /* tablist styles */
+  .tab-header{
+    display: flex;
+   
+  }
+  .tab-menu{
+   
+  }
+  .tab-item{
+   list-style: none;
+   margin: 10px;
+  }
+ 

@@ -78,13 +78,13 @@ body {
 
 .stroke {
   width: 2.5px;
-  height: 29px;
+  height: 25px;
   border-radius: 5px;
   background-color: #004e98;
   float: left;
   position: absolute;
   left: 0;
-  display: none;
+  /* display: ; */
 }
 .stroke:active {
   display: block;
