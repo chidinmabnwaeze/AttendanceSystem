@@ -4,7 +4,8 @@
     box-shadow: 1px ;
     width: 700px;
     margin: 40px;
-    box-shadow: 2px 2px 3px 2px rgb(226, 224, 224);
+    box-shadow: 0 0 3px 2px rgb(226, 224, 224);
+    border-radius: 8px;
 }
 .name{
     display: flex;

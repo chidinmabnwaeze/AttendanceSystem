@@ -69,6 +69,7 @@
   margin: 0;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  border-collapse: collapse;
 }
 .table-head {
   height: 40px;
@@ -79,16 +80,16 @@
   padding: 0;
   background-color: #004e98;
   color: white;
+  /* border: none; */
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  border: none;
-  border-collapse: collapse;
 }
+
 th {
-  border: none;
-  text-align: left;
-  margin: 0;
-  padding: 0;
+    border: none;
+    text-align: left;
+    margin: 0;
+    padding: 10px;
 }
 .rows td {
   padding: 10px;
@@ -164,6 +165,9 @@ th {
   }
   .tab-menu .actives{
     color: #004e98;
-    border-bottom: 3px solid #004e98;
+    /* border-bottom: 3px solid #004e98; */
+    border-radius: 3.5px;
+   padding: 5px;
+   /* background-color: red; */
   }
  

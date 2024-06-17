@@ -19,11 +19,11 @@ const Title = ({ text, sub, sub1, sub2 ,content ,content2 }) => {
     },
     {
       button: sub1,
-      content: content2,
+      // content: content2,
     },
     {
       button: sub2,
-      content: <Table />,
+    
     },
   ];
 
