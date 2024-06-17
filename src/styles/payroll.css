@@ -78,3 +78,20 @@ background-color: rgba(217, 217, 217, 1);
 .up , .down{
     border: none;
 }
+.page-tabBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(130, 130, 130, 1);
+}
+.tab-buttons{
+   padding: 20px;
+}
+.tButton{
+    margin-right:30px ;
+    cursor: pointer;
+    color: rgba(130, 130, 130, 1);
+}
+.content{
+    margin: 0 30px;
+}

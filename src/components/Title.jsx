@@ -81,7 +81,7 @@ const Title = ({ text, sub, sub1, sub2 ,content ,content2 }) => {
     
     </div>
 
-        <div className="right">
+        {/* <div className="right">
           <button className="filterButton">
             <img className="filter" src={Filter} alt="" />
           </button>
@@ -92,9 +92,9 @@ const Title = ({ text, sub, sub1, sub2 ,content ,content2 }) => {
             placeholder="Card ID, Role or Staff name"
           />
           <img className="search-icon" id="input" src={search} alt="" />
-        </div>
+        </div> */}
       </div>
-      <hr />
+      {/* <hr /> */}
 
       <div className="tabContent">
         {tabData.map((data, index) => (

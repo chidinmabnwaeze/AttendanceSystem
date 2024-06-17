@@ -152,7 +152,7 @@ th {
   /* tablist styles */
   .tab-header{
     display: flex;
-  color: rgba(130, 130, 130, 1);;
+  color: rgba(130, 130, 130, 1);
    
   }
   .tab-menu{
@@ -165,7 +165,7 @@ th {
   }
   .tab-menu .actives{
     color: #004e98;
-    /* border-bottom: 3px solid #004e98; */
+    border-bottom: 3px solid #004e98;
     border-radius: 3.5px;
    padding: 5px;
    /* background-color: red; */
