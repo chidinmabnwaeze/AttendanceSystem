@@ -6,7 +6,7 @@ import StaffSchedule from "../components/staffSchedule";
 import Searchbar from "../components/Searchbar";
 import search from "../assets/icons/Component 248.png";
 import Filter from "../assets/icons/funnel.png";
-import Tablist from "../components/Tablist";
+
 
 const Payroll = () => {
   const [activeTab, setActiveTab] = useState("pay" | "staff");
@@ -30,11 +30,11 @@ const Payroll = () => {
 
       <div className="page-tabBar">
         <div className="tab-buttons">
-          <span className="tButton" onClick={() => changeTab("pay")}>
+          <span className={`${activeTab ==="pay" ? "actives" : "tButton"}`} onClick={() => changeTab("pay")}>
             Payroll
           </span>
           <span
-            className={`${changeTab === "staff" && "actives"} tButton`}
+            className={`${activeTab ==="staff" ? "actives" : "tButton"}`}
             onClick={() => changeTab("staff")}
           >
             Staff Schedule

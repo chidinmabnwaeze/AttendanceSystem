@@ -34,17 +34,17 @@ const Timesheet = () => {
       />
       <div className="page-tabBar">
         <div className="tab-buttons">
-          <span className="tButton" onClick={() => changeTab("Clocked In")}>
+          <span className={`${activeTab ==="Clocked In" ? "actives" : "tButton"}`} onClick={() => changeTab("Clocked In")}>
            Clocked in
           </span>
           <span
-            className= "tButton"
+            className={`${activeTab ==="Clocked Late" ? "actives" : "tButton"}`}
             onClick={() => changeTab("Clocked Late")}
           >
-          Clocked Out
+          Clocked Late
           </span>
           <span
-            className= "tButton"
+            className= {`${activeTab ==="Off Today" ? "actives" : "tButton"}`}
             onClick={() => changeTab("Off Today")}
           >
           Off Today
@@ -74,6 +74,7 @@ const Timesheet = () => {
         )}
         {activeTab === "Off Today" && <div>payroll table</div>}
       </div>
+     
     </div>
   );
 };

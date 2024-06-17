@@ -88,10 +88,18 @@ background-color: rgba(217, 217, 217, 1);
    padding: 20px;
 }
 .tButton{
-    margin-right:30px ;
+    margin:45px ;
     cursor: pointer;
     color: rgba(130, 130, 130, 1);
 }
 .content{
     margin: 0 30px;
 }
+.actives{
+    color: #004e98;
+    border-bottom: 3px solid #004e98;
+    border-radius: 3.5px;
+   padding: 5px;
+   margin: 10px;
+   transition: 1s;
+  }

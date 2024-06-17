@@ -10,7 +10,7 @@ const Table = () => {
       id: 23476,
       email: "example@gmail.com",
       role: "Frontend developer",
-      status: notclocked,
+      status: "Clocked in",
       date: "2024-06-09",
     },
     {

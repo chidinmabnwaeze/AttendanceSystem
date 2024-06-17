@@ -163,11 +163,5 @@ th {
    margin: 15px;
    cursor: pointer;
   }
-  .tab-menu .actives{
-    color: #004e98;
-    border-bottom: 3px solid #004e98;
-    border-radius: 3.5px;
-   padding: 5px;
-   /* background-color: red; */
-  }
+  
  
