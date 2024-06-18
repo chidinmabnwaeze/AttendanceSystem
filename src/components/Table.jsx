@@ -46,7 +46,7 @@ const Table = () => {
       name: "Julius Gabriel",
       id: 23476,
       email: "example@gmail.com",
-      role: "Frontend developer",
+      role: "UI/UX Designer",
       status: "Clocked in",
       date: "2024-06-09",
     },

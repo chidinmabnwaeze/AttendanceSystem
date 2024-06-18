@@ -7,6 +7,7 @@ import search from "../assets/icons/Component 248.png";
 import Filter from "../assets/icons/funnel.png";
 import Form from "../components/form";
 import Table from "../components/Table";
+import LeaveTable from "../components/Table3"
 
 const leave = () => {
   const [activeTab, setActiveTab] = useState("apply");
@@ -60,7 +61,7 @@ const leave = () => {
         {activeTab === "apply" && <div><Form/></div>}
         {activeTab === "onLeave" && (
           <div>
-            <Table />
+            <LeaveTable />
            
           </div>
         )}

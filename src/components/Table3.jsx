@@ -11,7 +11,8 @@ const Table = () => {
       email: "example@gmail.com",
       role: "Frontend developer",
       status: "Leave",
-      date: "2024-06-09",
+      start: "2024-06-09",
+      end: "2024-10-15"
     },
     {
       img: userpic,
@@ -20,7 +21,8 @@ const Table = () => {
       email: "example@gmail.com",
       role: "Frontend developer",
       status: "Leave",
-      date: "2024-06-09",
+      start: "2024-06-09",
+      end: "2024-10-15"
     },
 
     {
@@ -30,35 +32,11 @@ const Table = () => {
       email: "example@gmail.com",
       role: "Backend developer",
       status: "Leave",
-      date: "2024-06-09",
-    },
-    {
-      img: userpic,
-      name: "Julius Gabriel",
-      id: 23476,
-      email: "example@gmail.com",
-      role: "Frontend developer",
-      status: "Leave",
-      date: "2024-06-09",
-    },
-    {
-      img: userpic,
-      name: "Julius Gabriel",
-      id: 23476,
-      email: "example@gmail.com",
-      role: "Frontend developer",
-      status: "Leave",
-      date: "2024-06-09",
-    },
-    {
-      img: userpic,
-      name: "Julius Gabriel",
-      id: 23476,
-      email: "example@gmail.com",
-      role: "Frontend developer",
-      status: "Leave",
-      date: "2024-06-09",
+      start: "2024-06-09",
+      end: "2024-10-15"
     }
+   
+    
   ];
   return (
     <div>
@@ -69,7 +47,8 @@ const Table = () => {
           <th>Email Address </th>
           <th>Role</th>
           <th>Status </th>
-          <th>Date </th>
+          <th>Start Date </th>
+          <th>End Date </th>
         </tr>
 
         {tab.map((tabb, index) => (
@@ -92,7 +71,8 @@ const Table = () => {
                 </span>
               </div>
             </td>
-            <td>{tabb.date}</td>
+            <td>{tabb.start}</td>
+            <td>{tabb.end}</td>
           </tr>
         ))}
       </table>

@@ -45,6 +45,7 @@ const Payroll = () => {
           <button className="filterButton">
             <img className="filter" src={Filter} alt="" />
           </button>
+          <div className="input-box">
           <input
             className="input"
             type="searchbox"
@@ -52,6 +53,7 @@ const Payroll = () => {
             placeholder="Card ID, Role or Staff name"
           />
           <img className="search-icon" id="input" src={search} alt="" />
+        </div>
         </div>
       </div>
       <br />
