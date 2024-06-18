@@ -10,7 +10,7 @@ const Table = () => {
       id: 23476,
       email: "example@gmail.com",
       role: "Frontend developer",
-      status: "Clocked Late",
+      status: "Leave",
       date: "2024-06-09",
     },
     {
@@ -19,7 +19,7 @@ const Table = () => {
       id: 23476,
       email: "example@gmail.com",
       role: "Frontend developer",
-      status: "Clocked Late",
+      status: "Leave",
       date: "2024-06-09",
     },
 
@@ -29,7 +29,7 @@ const Table = () => {
       id: 23476,
       email: "example@gmail.com",
       role: "Backend developer",
-      status: "Clocked Late",
+      status: "Leave",
       date: "2024-06-09",
     },
     {
@@ -38,7 +38,7 @@ const Table = () => {
       id: 23476,
       email: "example@gmail.com",
       role: "Frontend developer",
-      status: "Clocked Late",
+      status: "Leave",
       date: "2024-06-09",
     },
     {
@@ -47,7 +47,7 @@ const Table = () => {
       id: 23476,
       email: "example@gmail.com",
       role: "Frontend developer",
-      status: "Clocked Late",
+      status: "Leave",
       date: "2024-06-09",
     },
     {
@@ -56,7 +56,7 @@ const Table = () => {
       id: 23476,
       email: "example@gmail.com",
       role: "Frontend developer",
-      status: "Clocked Late",
+      status: "Leave",
       date: "2024-06-09",
     }
   ];
@@ -85,8 +85,8 @@ const Table = () => {
             <td>{tabb.role}</td>
             <td className="staff-status">
               <div className="clockedStatus">
-                <span className="stat2">
-                  <div className="circle-not"></div>
+                <span className="stat3">
+                  <div className="circle-leave"></div>
 
                   {tabb.status}
                 </span>

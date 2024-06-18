@@ -7,6 +7,7 @@ import search from "../assets/icons/Component 248.png";
 import Filter from "../assets/icons/funnel.png";
 import "../styles/timesheet.css";
 import Tablist from "../components/Tablist";
+import Table2 from "../components/Table2";
 import { useState } from "react";
 
 const Timesheet = () => {
@@ -66,10 +67,10 @@ const Timesheet = () => {
       </div>
       <br />
       <div className="content">
-        {activeTab === "Clocked In" && <div>payroll table</div>}
+        {activeTab === "Clocked In" && <div><Table/></div>}
         {activeTab === "Clocked Late" && (
           <div>
-            <Table />
+            <Table2 />
           </div>
         )}
         {activeTab === "Off Today" && <div>payroll table</div>}

@@ -123,17 +123,7 @@ th {
   height: 9px;
   margin-right: 6px;
 }
-/* .staff-status{
-    background-color: blueviolet;
-} */
-/* .active-tab{
-    color: #004e98;
-
-}
-.tab{
-    background-color: red;
-}
-.stats {
+.stat2 {
     color: rgb(205, 14, 0);
     display: flex;
     align-items: center;
@@ -147,7 +137,7 @@ th {
     width: 9px;
     height: 9px;
     margin-right: 6px;
-  } */
+  } 
 
   /* tablist styles */
   .tab-header{

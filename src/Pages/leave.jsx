@@ -35,8 +35,8 @@ const leave = () => {
             Apply
           </span>
           <span
-            className={`${activeTab === "eave" ? "actives" : "tButton"}`}
-            onClick={() => changeTab("eave")}
+            className={`${activeTab === "onLeave" ? "actives" : "tButton"}`}
+            onClick={() => changeTab("onLeave")}
           >
             On Leave
           </span>
@@ -58,10 +58,10 @@ const leave = () => {
       <br />
       <div className="content">
         {activeTab === "apply" && <div><Form/></div>}
-        {activeTab === "eave" && (
+        {activeTab === "onLeave" && (
           <div>
             <Table />
-            leave here
+           
           </div>
         )}
       </div>
