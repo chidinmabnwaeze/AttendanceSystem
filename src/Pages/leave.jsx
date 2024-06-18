@@ -1,70 +1,69 @@
-import React from "react";
+import React, { useState } from "react";
 import Title from "../components/Title";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import "../styles/leave.css";
+import search from "../assets/icons/Component 248.png";
+import Filter from "../assets/icons/funnel.png";
+import Form from "../components/form";
+import Table from "../components/Table";
 
 const leave = () => {
+  const [activeTab, setActiveTab] = useState("apply");
+  const changeTab = (tab) => {
+    setActiveTab(tab);
+  };
   const text = "Leave";
-  const apply ="Apply"
-  const onLeave = "On Leave"
+  // const apply ="Apply"
+  // const onLeave = "On Leave"
   return (
     <div>
       <Header />
-      <Sidebar/>
-      <Title text={text} 
-       sub={apply}
-      sub1 ={onLeave}/>
+      <Sidebar />
+      <Title
+        text={text}
+        //  sub={apply}
+        // sub1 ={onLeave}
+      />
 
-      <div className="form-border">
-        <form action="">
-          <div className="name">
-            <label className="staff" htmlFor="name">
-              Name of staff
-              <input type="text" placeholder="Select staff" />
-            </label>
-          </div>
+      <div className="page-tabBar">
+        <div className="tab-buttons">
+          <span
+            className={`${activeTab === "apply" ? "actives" : "tButton"}`}
+            onClick={() => changeTab("apply")}
+          >
+            Apply
+          </span>
+          <span
+            className={`${activeTab === "eave" ? "actives" : "tButton"}`}
+            onClick={() => changeTab("eave")}
+          >
+            On Leave
+          </span>
+        </div>
 
-          <div className="name">
-            <label className="staff" htmlFor="name">
-              Staff Role
-              <input type="text" placeholder="Staff role" />
-            </label>
+        <div className="right">
+          <button className="filterButton">
+            <img className="filter" src={Filter} alt="" />
+          </button>
+          <input
+            className="input"
+            type="searchbox"
+            id="input"
+            placeholder="Card ID, Role or Staff name"
+          />
+          <img className="search-icon" id="input" src={search} alt="" />
+        </div>
+      </div>
+      <br />
+      <div className="content">
+        {activeTab === "apply" && <div><Form/></div>}
+        {activeTab === "eave" && (
+          <div>
+            <Table />
+            leave here
           </div>
-
-          <div className="name">
-            <label className="staff" htmlFor="name">
-              Purpose of leave
-              <input type="text" placeholder="Enter purpose of leave" />
-            </label>
-          </div>
-
-          <div className="name">
-            <label className="staff" htmlFor="name">
-              Description
-              <textarea
-                type="textarea"
-                placeholder="Describe your leave"
-                textarea name="leaveDescription" id="staff" rows={10} cols={80}
-              />
-            </label>
-          </div>
-
-          <div className="name">
-            <label className="staff" htmlFor="name">
-              Leave duration
-              <input
-                type="text"
-               
-              />
-            </label>
-          </div>
-
-          <div className="formButtons">
-            <button className="cancel">Cancel</button>
-            <button className="approve">Approve Leave</button>
-          </div>
-        </form>
+        )}
       </div>
     </div>
   );

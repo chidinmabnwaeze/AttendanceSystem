@@ -10,7 +10,7 @@ import Tablist from "../components/Tablist";
 import { useState } from "react";
 
 const Timesheet = () => {
-  const [activeTab, setActiveTab] = useState("Clocked In" | "Clocked late" | "Off Today");
+  const [activeTab, setActiveTab] = useState("Clocked In");
   const changeTab = (tab) => {
     setActiveTab(tab);
   };

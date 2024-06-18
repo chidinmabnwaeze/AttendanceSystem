@@ -9,7 +9,7 @@ import Filter from "../assets/icons/funnel.png";
 
 
 const Payroll = () => {
-  const [activeTab, setActiveTab] = useState("pay" | "staff");
+  const [activeTab, setActiveTab] = useState("staff");
   const changeTab = (tab) => {
     setActiveTab(tab);
   };
