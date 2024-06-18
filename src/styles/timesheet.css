@@ -94,6 +94,7 @@ th {
 .rows td {
   padding: 10px;
   border-bottom: 1px solid rgba(234, 234, 234, 1);
+  color: rgba(130, 130, 130, 1);
 }
 .userpic {
   width: 35px;
@@ -124,12 +125,12 @@ th {
   margin-right: 6px;
 }
 .stat2 {
-    color: rgb(205, 14, 0);
+    color: rgba(205, 0, 74, 1);
     display: flex;
     align-items: center;
     border-radius: 4px;
-    background-color: rgba(184, 248, 121, 0.33);
-    width: 110px;
+    background-color: rgba(255, 167, 167, 0.15);
+    /* width: 110px; */
   }
   .circle-not {
     background-color: rgb(243, 162, 130);
@@ -137,6 +138,23 @@ th {
     width: 9px;
     height: 9px;
     margin-right: 6px;
+  } 
+
+  .stat3 {
+    color:  rgba(152, 148, 148, 1);
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    background-color: rgba(152, 148, 148, 0.15);
+    width: 110px;
+  }
+  .circle-leave {
+    background-color:  rgba(152, 148, 148, 1);
+    border-radius: 4px;
+    width: 9px;
+    height: 9px;
+    margin-right: 6px;
+   
   } 
 
   /* tablist styles */

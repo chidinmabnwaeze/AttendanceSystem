@@ -82,7 +82,7 @@ background-color: rgba(217, 217, 217, 1);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(130, 130, 130, 1);
+    border-bottom: 1px solid rgba(205, 205, 205, 1);
 }
 .tab-buttons{
    padding: 20px;
