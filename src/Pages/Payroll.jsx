@@ -52,7 +52,6 @@ const Payroll = () => {
             id="input"
             placeholder="Card ID, Role or Staff name"
           />
-          <img className="search-icon" id="input" src={search} alt="" />
         </div>
         </div>
       </div>

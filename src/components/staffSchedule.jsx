@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../styles/payroll.css";
 import arrowUp from "../assets/icons/arrow-up.svg";
 import arrowDown from "../assets/icons/arrow-down.svg";
+import check from "../assets/icons/Vector-c.png";
 
 const staffSchedule = () => {
   const [Schedule, setSchedule] = useState([
@@ -10,22 +11,36 @@ const staffSchedule = () => {
       clockInTime: "7:40am",
       lunchBreak: " ",
       clockOutTime: " ",
-      offToday: " check",
+      offToday: " ",
     },
     {
-      date: "Monday, 2 July",
-      clockInTime: "7:40am",
+      date: "Tuesday, 3 July",
+      clockInTime: "8:10am",
       lunchBreak: " ",
       clockOutTime: " ",
       offToday: " check",
     },
     {
-      date: "Monday, 2 July",
-      clockInTime: "7:40am",
+      date: "Wednesday, 4 July",
+      clockInTime: "8:20am",
       lunchBreak: " ",
-      clockOutTime: " ",
-      offToday: " check",
+      clockOutTime: "5:20pm ",
+      offToday: " ",
     },
+    {
+        date: "Thursday, 5 July",
+        clockInTime: "7:48am",
+        lunchBreak: " ",
+        clockOutTime: " ",
+        offToday: " ",
+      },
+      {
+        date: "Friday, 6 July",
+        clockInTime: "7:48am",
+        lunchBreak: " ",
+        clockOutTime: " ",
+        offToday: " ",
+      }
   ]);
 
   return (
@@ -73,6 +88,10 @@ const staffSchedule = () => {
           {/* scrollbar */}
         </div>
       </div>
+      <div className="sumButtons">
+      <button className="total">Total</button>
+        <button className="sum">200 000</button>
+    </div>
     </div>
   );
 };

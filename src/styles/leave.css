@@ -42,3 +42,7 @@
     border: none;
     
 }
+::placeholder{
+    font-family: inter;
+  
+}

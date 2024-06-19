@@ -3,7 +3,6 @@ import Title from "../components/Title";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import "../styles/leave.css";
-import search from "../assets/icons/Component 248.png";
 import Filter from "../assets/icons/funnel.png";
 import Form from "../components/form";
 import Table from "../components/Table";
@@ -53,7 +52,6 @@ const leave = () => {
             id="input"
             placeholder="Card ID, Role or Staff name"
           />
-          <img className="search-icon" id="input" src={search} alt="" />
         </div>
       </div>
       <br />

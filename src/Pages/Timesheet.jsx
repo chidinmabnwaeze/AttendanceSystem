@@ -8,6 +8,7 @@ import Filter from "../assets/icons/funnel.png";
 import "../styles/timesheet.css";
 import Tablist from "../components/Tablist";
 import Table2 from "../components/Table2";
+import Off from "../components/Table4"
 import { useState } from "react";
 
 const Timesheet = () => {
@@ -73,7 +74,7 @@ const Timesheet = () => {
             <Table2 />
           </div>
         )}
-        {activeTab === "Off Today" && <div>payroll table</div>}
+        {activeTab === "Off Today" && <div><Off/></div>}
       </div>
      
     </div>
