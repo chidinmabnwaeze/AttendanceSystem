@@ -70,5 +70,4 @@ const Payroll = () => {
 
 export default Payroll;
 
-// className={`${index === tabs && "actives"} tab-item ${<hr/>}`}
-// onClick={() => setTabs(index)}
+
