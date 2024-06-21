@@ -50,6 +50,9 @@ const form = () => {
             <button className="cancel">Cancel</button>
             <button className="approve">Approve Leave</button>
           </div>
+
+
+          
         </form>
       </div>
 
