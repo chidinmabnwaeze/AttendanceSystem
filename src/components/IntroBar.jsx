@@ -1,10 +1,13 @@
 import React from 'react'
+import avatar from '../assets/images/avatar.png'
 
 const IntroBar = () => {
   return (
     <div className='introBar'>
-       <img className='anime' src="" alt="" /> 
+      <div className="admin">
+       <img className='anime' src={avatar} alt="" /> 
        <p>Welcome Sarah</p>
+       </div>
     </div>
   )
 }

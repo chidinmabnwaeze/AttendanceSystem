@@ -298,3 +298,20 @@ padding: 2px
   color: #004e98;
   padding-bottom: 8px;
 }
+.introBar{
+  background: linear-gradient(to right, #B0C9D7, #004e98);
+  height: 100px;
+  width: 97%;
+  border-radius: 10px;
+  /* align-items: center; */
+  display: flex;
+  justify-content: left;
+}
+.admin{
+  display: flex;
+  /* align-items: center; */
+  margin: 0 auto;
+  background-color: red;
+  margin-top
+
+}
