@@ -304,14 +304,12 @@ padding: 2px
   width: 97%;
   border-radius: 10px;
   /* align-items: center; */
-  display: flex;
-  justify-content: left;
+  /* display: flex;
+  justify-content: left; */
 }
 .admin{
   display: flex;
-  /* align-items: center; */
+  align-items: center;
   margin: 0 auto;
-  background-color: red;
-  margin-top
-
+ padding:40px;
 }

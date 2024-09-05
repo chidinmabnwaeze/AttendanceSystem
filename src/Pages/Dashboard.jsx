@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import IntroBar from '../components/IntroBar'
+import '../styles/dashboard.css'
 import usersIcon from '../assets/icons/fa_users.svg'
 
 const Dashboard = () => {
@@ -20,8 +21,8 @@ const [count, setCount] = useState([
       <IntroBar/>
 
       <div className="card-count">
-        <div className="card">
             {count.map((countCard, index)=>{
+        <div className="dashboardCard">
                 <div className="box" key={index}>
                   <div className="box-title">
                     <p>{countCard.title}</p>
@@ -31,9 +32,9 @@ const [count, setCount] = useState([
                         <p className='number'>{countCard.staffCount}</p>
                     </div>
                 </div>
+            </div> 
             })}
         </div>
-        </div> 
     </div>
   )
 }
