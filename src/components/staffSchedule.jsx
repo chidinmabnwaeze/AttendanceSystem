@@ -80,7 +80,7 @@ const staffSchedule = () => {
                 <td className="payClass">{schedule.clockInTime}</td>
                 <td className="payClass">{schedule.lunchBreak}</td>
                 <td className="payClass">{schedule.clockOutTime}</td>
-                <td className="payClasses">{schedule.offToday}</td>
+                <td className="payClasse">{schedule.offToday}</td>
               </tr>
             ))}
           </table>
