@@ -6,7 +6,7 @@ import "../styles/leave.css";
 import Filter from "../assets/icons/funnel.png";
 import Form from "../components/form";
 import Table from "../components/Table";
-import LeaveTable from "../components/Table3"
+import LeaveTable from "../components/Table3";
 
 const leave = () => {
   const [activeTab, setActiveTab] = useState("apply");
@@ -56,11 +56,14 @@ const leave = () => {
       </div>
       <br />
       <div className="content">
-        {activeTab === "apply" && <div><Form/></div>}
+        {activeTab === "apply" && (
+          <div>
+            <Form />
+          </div>
+        )}
         {activeTab === "onLeave" && (
           <div>
             <LeaveTable />
-           
           </div>
         )}
       </div>

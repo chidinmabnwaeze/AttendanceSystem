@@ -7,7 +7,6 @@ import Searchbar from "../components/Searchbar";
 import search from "../assets/icons/Component 248.png";
 import Filter from "../assets/icons/funnel.png";
 
-
 const Payroll = () => {
   const [activeTab, setActiveTab] = useState("staff");
   const changeTab = (tab) => {
@@ -30,11 +29,14 @@ const Payroll = () => {
 
       <div className="page-tabBar">
         <div className="tab-buttons">
-          <span className={`${activeTab ==="pay" ? "actives" : "tButton"}`} onClick={() => changeTab("pay")}>
+          <span
+            className={`${activeTab === "pay" ? "actives" : "tButton"}`}
+            onClick={() => changeTab("pay")}
+          >
             Payroll
           </span>
           <span
-            className={`${activeTab ==="staff" ? "actives" : "tButton"}`}
+            className={`${activeTab === "staff" ? "actives" : "tButton"}`}
             onClick={() => changeTab("staff")}
           >
             Staff Schedule
@@ -46,13 +48,13 @@ const Payroll = () => {
             <img className="filter" src={Filter} alt="" />
           </button>
           <div className="input-box">
-          <input
-            className="input"
-            type="searchbox"
-            id="input"
-            placeholder="Card ID, Role or Staff name"
-          />
-        </div>
+            <input
+              className="input"
+              type="searchbox"
+              id="input"
+              placeholder="Card ID, Role or Staff name"
+            />
+          </div>
         </div>
       </div>
       <br />
@@ -69,5 +71,3 @@ const Payroll = () => {
 };
 
 export default Payroll;
-
-
