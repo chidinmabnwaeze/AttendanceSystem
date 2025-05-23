@@ -1,48 +1,53 @@
-.form-border{
-    background-color: white;
-   padding: 20px;
-    box-shadow: 1px ;
-    width: 700px;
-    margin: 20px;
-    box-shadow: 0 0 3px 2px rgb(226, 224, 224);
-    border-radius: 8px;
+.form-border {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 1px;
+  width: 700px;
+  margin: 20px;
+  box-shadow: 0 0 3px 2px rgb(226, 224, 224);
+  border-radius: 8px;
 }
-.name{
-    display: flex;
-    margin: 50px;
-
+.name {
+  display: flex;
+  margin: 50px;
 }
-.staff{
-    display: flex;
-    flex-direction: column;
+.staff {
+  display: flex;
+  flex-direction: column;
 }
-.staff input{
-    width: 600px;
-    height: 40px;
-    border-radius: 6px;
-    border: 1px solid rgba(234, 234, 234, 1);
+.staff input {
+  width: 600px;
+  height: 40px;
+  border-radius: 6px;
+  border: 1px solid rgba(234, 234, 234, 1);
 }
-.cancel{
-    height: 40px;
-    margin-right: 10px;
-    border: none;
-    padding:10px;
+.cancel {
+  height: 40px;
+  margin-right: 10px;
+  border: none;
+  padding: 10px;
 }
-.approve{
-    background-color: #004e98;
-    color: white;
-    height: 40px;
-    border: none;
-   border-radius: 4px;
-   padding:10px;
+.approve {
+  background-color: #004e98;
+  color: white;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
 }
-.formButtons{
-    display: flex;
-    justify-content: end;
-    border: none;
-    
+.approve:hover {
+  background-color: rgb(238, 84, 84);
+  transition: 0.5s ease-out;
 }
-::placeholder{
-    font-family: inter;
-  
+.formButtons {
+  display: flex;
+  justify-content: end;
+  border: none;
+}
+::placeholder {
+  font-family: inter;
+}
+textarea {
+  border: 1px solid rgb(212, 210, 210);
+  border-radius: 4px;
 }

@@ -1,4 +1,4 @@
-import React  from "react";
+import React from "react";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import Title from "../components/Title";
@@ -8,10 +8,11 @@ import Filter from "../assets/icons/funnel.png";
 import "../styles/timesheet.css";
 import Tablist from "../components/Tablist";
 import Table2 from "../components/Table2";
-import Off from "../components/Table4"
+import Off from "../components/Table4";
 import { useState } from "react";
 
-const Timesheet = () => {
+const Timesheet = ({ tab }) => {
+  const [search, setSearch] = useState("");
   const [activeTab, setActiveTab] = useState("Clocked In");
   const changeTab = (tab) => {
     setActiveTab(tab);
@@ -21,6 +22,10 @@ const Timesheet = () => {
   // const sub1 ="Clocked late";
   // const sub2 = "Off Today";
   // const content = <Table/>
+
+  const searchFunction = () => {
+    tab.filter(() => tab.toLowerCase().includes(search));
+  };
 
   return (
     <div>
@@ -36,20 +41,25 @@ const Timesheet = () => {
       />
       <div className="page-tabBar">
         <div className="tab-buttons">
-          <span className={`${activeTab ==="Clocked In" ? "actives" : "tButton"}`} onClick={() => changeTab("Clocked In")}>
-           Clocked in
+          <span
+            className={`${activeTab === "Clocked In" ? "actives" : "tButton"}`}
+            onClick={() => changeTab("Clocked In")}
+          >
+            Clocked in
           </span>
           <span
-            className={`${activeTab ==="Clocked Late" ? "actives" : "tButton"}`}
+            className={`${
+              activeTab === "Clocked Late" ? "actives" : "tButton"
+            }`}
             onClick={() => changeTab("Clocked Late")}
           >
-          Clocked Late
+            Clocked Late
           </span>
           <span
-            className= {`${activeTab ==="Off Today" ? "actives" : "tButton"}`}
+            className={`${activeTab === "Off Today" ? "actives" : "tButton"}`}
             onClick={() => changeTab("Off Today")}
           >
-          Off Today
+            Off Today
           </span>
         </div>
 
@@ -68,15 +78,22 @@ const Timesheet = () => {
       </div>
       <br />
       <div className="content">
-        {activeTab === "Clocked In" && <div><Table/></div>}
+        {activeTab === "Clocked In" && (
+          <div>
+            <Table />
+          </div>
+        )}
         {activeTab === "Clocked Late" && (
           <div>
             <Table2 />
           </div>
         )}
-        {activeTab === "Off Today" && <div><Off/></div>}
+        {activeTab === "Off Today" && (
+          <div>
+            <Off />
+          </div>
+        )}
       </div>
-     
     </div>
   );
 };
