@@ -3,15 +3,16 @@ import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import Title from "../components/Title";
 import Table from "../components/Table";
-import search from "../assets/icons/Component 248.png";
+import searchIcon from "../assets/icons/Component 248.png";
 import Filter from "../assets/icons/funnel.png";
 import "../styles/timesheet.css";
 import Tablist from "../components/Tablist";
 import Table2 from "../components/Table2";
 import Off from "../components/Table4";
+import userpic from "../assets/images/profile.png";
 import { useState } from "react";
 
-const Timesheet = ({ tab }) => {
+const Timesheet = () => {
   const [search, setSearch] = useState("");
   const [activeTab, setActiveTab] = useState("Clocked In");
   const changeTab = (tab) => {
@@ -23,9 +24,68 @@ const Timesheet = ({ tab }) => {
   // const sub2 = "Off Today";
   // const content = <Table/>
 
-  const searchFunction = () => {
-    tab.filter(() => tab.toLowerCase().includes(search));
-  };
+  const userTable = [
+    {
+      img: userpic,
+      name: "Julius Gabriel",
+      id: 23476,
+      email: "example@gmail.com",
+      role: "Frontend developer",
+      status: "Clocked in",
+      date: "2024-06-09",
+    },
+    {
+      img: userpic,
+      name: "Julius Gabriel",
+      id: 23476,
+      email: "example@gmail.com",
+      role: "Frontend developer",
+      status: "Clocked in",
+      date: "2024-06-09",
+    },
+
+    {
+      img: userpic,
+      name: "Julius Gabriel",
+      id: 23476,
+      email: "example@gmail.com",
+      role: "Backend developer",
+      status: "Clocked in",
+      date: "2024-06-09",
+    },
+    {
+      img: userpic,
+      name: "Julius Gabriel",
+      id: 23476,
+      email: "example@gmail.com",
+      role: "Frontend developer",
+      status: "Clocked in",
+      date: "2024-06-09",
+    },
+    {
+      img: userpic,
+      name: "Julius Gabriel",
+      id: 23476,
+      email: "example@gmail.com",
+      role: "UI/UX Designer",
+      status: "Clocked in",
+      date: "2024-06-09",
+    },
+    {
+      img: userpic,
+      name: "Julius Gabriel",
+      id: 23476,
+      email: "example@gmail.com",
+      role: "Frontend developer",
+      status: "Clocked in",
+      date: "2024-06-09",
+    },
+  ];
+
+  const filteredSearch = userTable.filter((tables) =>
+    Object.values(tables).join(" ").toLowerCase().includes(search.toLowerCase())
+  );
+  console.log(filteredSearch);
 
   return (
     <div>
@@ -71,16 +131,18 @@ const Timesheet = ({ tab }) => {
             className="input"
             type="searchbox"
             id="input"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
             placeholder="Card ID, Role or Staff name"
           />
-          <img className="search-icon" id="input" src={search} alt="" />
+          <img className="search-icon" id="input" src={searchIcon} alt="" />
         </div>
       </div>
       <br />
       <div className="content">
         {activeTab === "Clocked In" && (
           <div>
-            <Table />
+            <Table userTable={filteredSearch} />
           </div>
         )}
         {activeTab === "Clocked Late" && (

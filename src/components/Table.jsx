@@ -2,64 +2,7 @@ import React from "react";
 import userpic from "../assets/images/profile.png";
 import notclocked from "./notclocked";
 
-const Table = (tab) => {
-  const tab = [
-    {
-      img: userpic,
-      name: "Julius Gabriel",
-      id: 23476,
-      email: "example@gmail.com",
-      role: "Frontend developer",
-      status: "Clocked in",
-      date: "2024-06-09",
-    },
-    {
-      img: userpic,
-      name: "Julius Gabriel",
-      id: 23476,
-      email: "example@gmail.com",
-      role: "Frontend developer",
-      status: "Clocked in",
-      date: "2024-06-09",
-    },
-
-    {
-      img: userpic,
-      name: "Julius Gabriel",
-      id: 23476,
-      email: "example@gmail.com",
-      role: "Backend developer",
-      status: "Clocked in",
-      date: "2024-06-09",
-    },
-    {
-      img: userpic,
-      name: "Julius Gabriel",
-      id: 23476,
-      email: "example@gmail.com",
-      role: "Frontend developer",
-      status: "Clocked in",
-      date: "2024-06-09",
-    },
-    {
-      img: userpic,
-      name: "Julius Gabriel",
-      id: 23476,
-      email: "example@gmail.com",
-      role: "UI/UX Designer",
-      status: "Clocked in",
-      date: "2024-06-09",
-    },
-    {
-      img: userpic,
-      name: "Julius Gabriel",
-      id: 23476,
-      email: "example@gmail.com",
-      role: "Frontend developer",
-      status: "Clocked in",
-      date: "2024-06-09",
-    },
-  ];
+const Table = ({ userTable }) => {
   return (
     <div>
       <table className="staffTable">
@@ -72,7 +15,7 @@ const Table = (tab) => {
           <th>Date </th>
         </tr>
 
-        {tab.map((tabb, index) => (
+        {userTable.map((tabb, index) => (
           <tr className="rows" key={index}>
             <td className="staff-name">
               <span className="tt">
