@@ -87,6 +87,11 @@ const Timesheet = () => {
   );
   console.log(filteredSearch);
 
+  const statusFilter = userTable.filter((status) =>
+    `${status.status}`.toLowerCase().includes()
+  );
+
+  console.log(statusFilter);
   return (
     <div>
       <Header />
@@ -101,6 +106,7 @@ const Timesheet = () => {
       />
       <div className="page-tabBar">
         <div className="tab-buttons">
+          <span>{/* map tabs name together and filter active tabs */}</span>
           <span
             className={`${activeTab === "Clocked In" ? "actives" : "tButton"}`}
             onClick={() => changeTab("Clocked In")}
@@ -142,7 +148,7 @@ const Timesheet = () => {
       <div className="content">
         {activeTab === "Clocked In" && (
           <div>
-            <Table userTable={filteredSearch} />
+            <Table userTable={filteredSearch} statusFilter={statusFilter} />
           </div>
         )}
         {activeTab === "Clocked Late" && (
