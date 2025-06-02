@@ -14,7 +14,7 @@ import { useState } from "react";
 
 const Timesheet = () => {
   const [search, setSearch] = useState("");
-  const [activeTab, setActiveTab] = useState("Clocked In");
+  const [activeTab, setActiveTab] = useState("All");
   const changeTab = (tab) => {
     setActiveTab(tab);
   };
@@ -59,7 +59,7 @@ const Timesheet = () => {
       id: 23476,
       email: "example@gmail.com",
       role: "Frontend developer",
-      status: "Clocked in",
+      status: "Off today",
       date: "2024-06-09",
     },
     {
@@ -78,6 +78,15 @@ const Timesheet = () => {
       email: "example@gmail.com",
       role: "Frontend developer",
       status: "Clocked in",
+      date: "2024-06-09",
+    },
+    {
+      img: userpic,
+      name: "Julius Gabriel",
+      id: 23476,
+      email: "example@gmail.com",
+      role: "Frontend developer",
+      status: "Clocked late",
       date: "2024-06-09",
     },
   ];
@@ -107,6 +116,12 @@ const Timesheet = () => {
       <div className="page-tabBar">
         <div className="tab-buttons">
           <span>{/* map tabs name together and filter active tabs */}</span>
+          <span
+            className={`${activeTab === "All" ? "actives" : "tButton"}`}
+            onClick={() => changeTab("All")}
+          >
+            All
+          </span>
           <span
             className={`${activeTab === "Clocked In" ? "actives" : "tButton"}`}
             onClick={() => changeTab("Clocked In")}
@@ -146,7 +161,7 @@ const Timesheet = () => {
       </div>
       <br />
       <div className="content">
-        {activeTab === "Clocked In" && (
+        {activeTab === "All" && (
           <div>
             <Table userTable={filteredSearch} statusFilter={statusFilter} />
           </div>
