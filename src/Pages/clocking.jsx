@@ -18,7 +18,7 @@ const clocking = () => {
 
   setInterval(updateCurrentTime, 1000);
 
-  const date =new Date().toDateString()
+  const date = new Date().toDateString();
 
   //   useEffect(() =>{
   //     const interval =
@@ -41,57 +41,59 @@ const clocking = () => {
     <main>
       <Header />
       <Sidebar />
-      <section className="section1">
-        <div className="welcometext">
-          <div className="welcome">
-            <h2>Welcome User,</h2>
-          </div>
-          <div className="welcome">
-            <h4>IPI Solutions Limited Attendances</h4>
-          </div>
-          <div className="welcome">
-            <p>Clock in</p>
-          </div>
-        </div>
-
-        <section className="right-section">
-          <div className="clock-img">
-            <img className="roundClock" src={Clock} alt="" />
+      <section className="main-clocking">
+        <section className="section1">
+          <div className="welcometext">
+            <div className="welcome">
+              <h2>Welcome User,</h2>
+            </div>
+            <div className="welcome">
+              <h4>Keva Foundation Attendance</h4>
+            </div>
+            <div className="welcome">
+              <p>Clock in</p>
+            </div>
           </div>
 
-          <div className="timebuttons">
-            <button className="time">
-              <h4 id="hrs">{currentTime.split(":")[0]}</h4>
-              <p>Hours</p>
-            </button>
-            <button className="time">
-              <h4 id="mins">{currentTime.split(":")[1]}</h4>
-              <p>Minutes</p>
-            </button>
-            <button className="time">
-              <h4 id="secs">{currentTime.split(":")[2].split(" ")[0]}</h4>
-              <p>Seconds</p>
-            </button>
-            <button className="time">
-              <h4 id="am">{currentTime.split(" ")[1].toUpperCase()}</h4>
-            </button>
+          <div className="illustration">
+            <img src={rafiki} alt="" />
+          </div>
+        </section>
 
-            <div className="dateStamp">
-              <h4 className="date">{date}</h4>
+        <section className="section2">
+          <section className="right-section">
+            <div className="clock-img">
+              <img className="roundClock" src={Clock} alt="" />
+            </div>
+
+            <div className="timebuttons">
+              <button className="time">
+                <h4 id="hrs">{currentTime.split(":")[0]}</h4>
+                <p>Hours</p>
+              </button>
+              <button className="time">
+                <h4 id="mins">{currentTime.split(":")[1]}</h4>
+                <p>Minutes</p>
+              </button>
+              <button className="time">
+                <h4 id="secs">{currentTime.split(":")[2].split(" ")[0]}</h4>
+                <p>Seconds</p>
+              </button>
+              <button className="time">
+                <h4 id="am">{currentTime.split(" ")[1].toUpperCase()}</h4>
+              </button>
+
+              <div className="dateStamp">
+                <h4 className="date">{date}</h4>
+              </div>
+            </div>
+          </section>
+          <div className="scanner">
+            <div className="inner">
+              <img src={Scan} alt="" />
             </div>
           </div>
         </section>
-      </section>
-
-      <section className="section2">
-        <div className="illustration">
-          <img src={rafiki} alt="" />
-        </div>
-        <div className="scanner">
-          <div className="inner">
-            <img src={Scan} alt="" />
-          </div>
-        </div>
       </section>
     </main>
   );
