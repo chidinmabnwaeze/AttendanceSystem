@@ -1,6 +1,25 @@
-.dashboardCard{
-    border: 2px solid black;
+.dashboardCard {
+  /* border: 2px solid black; */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 300px;
+  margin: 1rem;
 }
-.box{
-    background-color: red;
+.box-img {
+  margin: 0.75rem;
+}
+.box-img img {
+  background-color: #e91be9;
+  padding: 10px;
+  border-radius: 50px;
+}
+.card-count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+.number {
+  font: 2rem bold;
 }

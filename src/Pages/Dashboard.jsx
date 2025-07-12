@@ -6,13 +6,28 @@ import "../styles/dashboard.css";
 import usersIcon from "../assets/icons/fa_users.svg";
 
 const Dashboard = () => {
-  const [count, setCount] = useState([
+  const count = [
     {
       title: "No of Total staff",
       img: usersIcon,
       staffCount: 100,
     },
-  ]);
+    {
+      title: "No of Total staff",
+      img: usersIcon,
+      staffCount: 100,
+    },
+    {
+      title: "No of Total staff",
+      img: usersIcon,
+      staffCount: 100,
+    },
+    {
+      title: "No of Total staff",
+      img: usersIcon,
+      staffCount: 100,
+    },
+  ];
 
   return (
     <div className="hero">
@@ -21,19 +36,24 @@ const Dashboard = () => {
       <IntroBar />
 
       <div className="card-count">
-        {count.map((countCard, index) => {
+        {count.map((countCard, index) => (
           <div className="dashboardCard">
             <div className="box" key={index}>
-              <div className="box-title">
-                <p>{countCard.title}</p>
+              <div className="box-img">
+                <img src={countCard.img} alt="" />
               </div>
               <div className="box-number">
-                <img src={countCard.img} alt="" />
+                <p>{countCard.title}</p>
                 <p className="number">{countCard.staffCount}</p>
               </div>
             </div>
-          </div>;
-        })}
+          </div>
+        ))}
+
+        <section>
+          <div className="pieChart"></div>
+          <div className="lineChart"></div>
+        </section>
       </div>
     </div>
   );
