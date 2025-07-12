@@ -2,7 +2,7 @@
   background-color: white;
   padding: 20px;
   box-shadow: 1px;
-  width: 700px;
+  /* width: 700px; */
   margin: 20px;
   box-shadow: 0 0 3px 2px rgb(226, 224, 224);
   border-radius: 8px;
@@ -28,7 +28,7 @@
   padding: 10px;
 }
 .approve {
-  background-color: #004e98;
+  background-color: #e91be9;
   color: white;
   height: 40px;
   border: none;
