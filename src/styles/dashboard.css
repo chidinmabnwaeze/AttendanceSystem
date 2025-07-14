@@ -23,3 +23,15 @@
 .number {
   font: 2rem bold;
 }
+.charts {
+  display: flex;
+  justify-content: space-between;
+}
+.pieChart,
+.lineChart {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 3rem;
+  margin: 0.7rem;
+  width: 50%;
+  border-radius: 10px;
+}
