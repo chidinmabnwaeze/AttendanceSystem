@@ -110,9 +110,27 @@ th {
   flex-direction: row;
   align-items: center;
 }
-.clockedstatus {
-  background-color: rgba(211, 255, 167, 0.33);
+.clocked {
+  background-color: rgba(0, 205, 21, 1);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 5px;
 }
+.late {
+  background-color: rgba(205, 0, 74, 1);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 5px;
+}
+/* .clockedstatus {
+  background-color: rgba(211, 255, 167, 0.33);
+} */
 .stat {
   color: rgba(0, 205, 21, 1);
   display: flex;
@@ -122,7 +140,7 @@ th {
   width: 110px;
 }
 .circle {
-  background-color: rgba(0, 205, 21, 1);
+  background-color: white;
   border-radius: 4px;
   width: 9px;
   height: 9px;

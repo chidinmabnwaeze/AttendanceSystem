@@ -3,51 +3,56 @@ import userpic from "../assets/images/profile.png";
 import notclocked from "./notclocked";
 
 const Table = ({ userTable }) => {
-  const { clockedIns, setClockedIn } = useState("");
-
-  let clockedIn = "";
-  let notClocked = "";
-  let leave = "";
+  const [clockedStatus, setClockedStatus] = useState("");
 
   return (
     <div>
       <table className="staffTable">
-        <tr className="table-head">
-          <th>Staff Name</th>
-          <th>Card ID </th>
-          <th>Email Address </th>
-          <th>Role</th>
-          <th>Time</th>
-          <th>Status </th>
-          <th>Date </th>
-        </tr>
-
-        {userTable.map((tabb, index) => (
-          <tr className="rows" key={index}>
-            <td className="staff-name">
-              <span className="tt">
-                <img className="userpic" src={tabb.img} alt="" />
-                {tabb.name}
-              </span>
-            </td>
-            <td>{tabb.id}</td>
-            <td>{tabb.email}</td>
-            <td>{tabb.role}</td>
-            <td>{tabb.time}</td>
-            <>
-              <td className="staff-status ">
-                <div className="clockedStatus">
-                  <span className="stat">
-                    <div className="circle"></div>
-
-                    {tabb.status}
-                  </span>
+        <thead>
+          <tr className="table-head">
+            <th>Staff Name</th>
+            <th>Card ID </th>
+            <th>Email Address </th>
+            <th>Role</th>
+            <th>Time</th>
+            <th>Status </th>
+            <th>Date </th>
+          </tr>
+        </thead>
+        <tbody>
+          {userTable.map((tabb, index) => (
+            <tr className="rows" key={index}>
+              <td className="staff-name">
+                <span className="tt">
+                  <img className="userpic" src={tabb.img} alt="" />
+                  {tabb.name}
+                </span>
+              </td>
+              <td>{tabb.id}</td>
+              <td>{tabb.email}</td>
+              <td>{tabb.role}</td>
+              <td>{tabb.time}</td>
+              <td className="staff-status">
+                <div
+                  className={`${
+                    tabb.status === "Clocked in"
+                      ? "clocked"
+                      : tabb.status === "Clocked Late"
+                      ? "late"
+                      : tabb.status === "Off Today"
+                      ? "leave"
+                      : ""
+                  }`}
+                >
+                  <div className="circle"></div>
+                  {tabb.status}
                 </div>
               </td>
-            </>
-            <td>{tabb.date}</td>
-          </tr>
-        ))}
+
+              <td>{tabb.date}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </div>
   );

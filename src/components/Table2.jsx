@@ -58,12 +58,12 @@ const Table = () => {
       role: "Frontend developer",
       status: "Clocked Late",
       date: "2024-06-09",
-    }
+    },
   ];
   return (
     <div>
-      <table className="staffTable" >
-        <tr className="table-head" >
+      <table className="staffTable">
+        <tr className="table-head">
           <th>Staff Name</th>
           <th>Card ID </th>
           <th>Email Address </th>
@@ -85,11 +85,11 @@ const Table = () => {
             <td>{tabb.role}</td>
             <td className="staff-status">
               <div className="clockedStatus">
-                <span className="stat2">
-                  <div className="circle-not"></div>
+                {/* <span className="stat2"> */}
+                <div className="circle-not"></div>
 
-                  {tabb.status}
-                </span>
+                {tabb.status}
+                {/* </span> */}
               </div>
             </td>
             <td>{tabb.date}</td>
