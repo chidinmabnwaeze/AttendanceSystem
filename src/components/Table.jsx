@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import userpic from "../assets/images/profile.png";
 import notclocked from "./notclocked";
 
 const Table = ({ userTable }) => {
+  const { clockedIns, setClockedIn } = useState("");
+
+  let clockedIn = "";
+  let notClocked = "";
+  let leave = "";
+
   return (
     <div>
       <table className="staffTable">
@@ -11,6 +17,7 @@ const Table = ({ userTable }) => {
           <th>Card ID </th>
           <th>Email Address </th>
           <th>Role</th>
+          <th>Time</th>
           <th>Status </th>
           <th>Date </th>
         </tr>
@@ -26,15 +33,18 @@ const Table = ({ userTable }) => {
             <td>{tabb.id}</td>
             <td>{tabb.email}</td>
             <td>{tabb.role}</td>
-            <td className="staff-status">
-              <div className="clockedStatus">
-                <span className="stat">
-                  <div className="circle"></div>
+            <td>{tabb.time}</td>
+            <>
+              <td className="staff-status ">
+                <div className="clockedStatus">
+                  <span className="stat">
+                    <div className="circle"></div>
 
-                  {tabb.status}
-                </span>
-              </div>
-            </td>
+                    {tabb.status}
+                  </span>
+                </div>
+              </td>
+            </>
             <td>{tabb.date}</td>
           </tr>
         ))}

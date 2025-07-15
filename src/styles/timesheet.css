@@ -95,6 +95,11 @@ th {
   border-bottom: 1px solid rgba(234, 234, 234, 1);
   color: rgba(130, 130, 130, 1);
 }
+.rows:nth-child(odd) {
+  background-color: #f3c7f3;
+}
+/* .rows td:nth-child(even) {
+} */
 .userpic {
   width: 35px;
   border-radius: 20px;

@@ -24,19 +24,19 @@ const Dashboard = () => {
       staffCount: 100,
     },
     {
-      title: "No of Total staff",
+      title: "No of Present Staff",
       img: usersIcon,
-      staffCount: 100,
+      staffCount: 70,
     },
     {
-      title: "No of Total staff",
+      title: "No of Absent Staff",
       img: usersIcon,
-      staffCount: 100,
+      staffCount: 20,
     },
     {
-      title: "No of Total staff",
+      title: "No of Staff on Leave",
       img: usersIcon,
-      staffCount: 100,
+      staffCount: 10,
     },
   ];
   const data = [
@@ -101,24 +101,30 @@ const Dashboard = () => {
           </div>
 
           <div className="lineChart">
-            <ResponsiveContainer width="100%" height={300}>
+            <ResponsiveContainer width="100%" height={400}>
               <LineChart
                 data={data}
-                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+                // margin={{ top: 5, right: 0, left: 0, bottom: 5 }}
               >
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip />
-                <Legend />
+                <Legend fill="#e91be9" />
                 <Line
                   type="monotone"
                   dataKey="sales"
-                  stroke="#8884d8"
+                  stroke="#e91be9"
                   activeDot={{ r: 8 }}
                 />
               </LineChart>
             </ResponsiveContainer>
+          </div>
+        </section>
+
+        <section className="recents">
+          <div>
+            <h1>Recent Activities</h1>
           </div>
         </section>
       </section>
