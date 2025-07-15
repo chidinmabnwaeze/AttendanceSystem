@@ -57,68 +57,70 @@ const Dashboard = () => {
       <Sidebar />
       <IntroBar />
 
-      <div className="card-count">
-        {count.map((countCard, index) => (
-          <div className="dashboardCard">
-            <div className="box" key={index}>
-              <div className="box-img">
-                <img src={countCard.img} alt="" />
-              </div>
-              <div className="box-number">
-                <p>{countCard.title}</p>
-                <p className="number">{countCard.staffCount}</p>
+      <section className="dash">
+        <div className="card-count">
+          {count.map((countCard, index) => (
+            <div className="dashboardCard">
+              <div className="box" key={index}>
+                <div className="box-img">
+                  <img src={countCard.img} alt="" />
+                </div>
+                <div className="box-number">
+                  <p>{countCard.title}</p>
+                  <p className="number">{countCard.staffCount}</p>
+                </div>
               </div>
             </div>
+          ))}
+        </div>
+
+        <section className="charts">
+          <div className="pieChart">
+            <ResponsiveContainer width="100%" height={400}>
+              <PieChart>
+                <Pie
+                  data={data}
+                  dataKey="sales" // Key for the value of each slice
+                  nameKey="name" // Key for the name/label of each slice
+                  cx="50%" // X-coordinate of the center
+                  cy="50%" // Y-coordinate of the center
+                  outerRadius={150} // Outer radius of the pie
+                  fill="#8884d8" // Default fill color
+                  label // Display labels for each slice
+                >
+                  {data.map((entry, index) => (
+                    <Cell
+                      key={`cell-${index}`}
+                      fill={COLORS[index % COLORS.length]}
+                    />
+                  ))}
+                </Pie>
+                <Tooltip /> {/* Displays data on hover */}
+              </PieChart>
+            </ResponsiveContainer>
           </div>
-        ))}
-      </div>
 
-      <section className="charts">
-        <div className="pieChart">
-          <ResponsiveContainer width="100%" height={400}>
-            <PieChart>
-              <Pie
+          <div className="lineChart">
+            <ResponsiveContainer width="100%" height={300}>
+              <LineChart
                 data={data}
-                dataKey="sales" // Key for the value of each slice
-                nameKey="name" // Key for the name/label of each slice
-                cx="50%" // X-coordinate of the center
-                cy="50%" // Y-coordinate of the center
-                outerRadius={150} // Outer radius of the pie
-                fill="#8884d8" // Default fill color
-                label // Display labels for each slice
+                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
               >
-                {data.map((entry, index) => (
-                  <Cell
-                    key={`cell-${index}`}
-                    fill={COLORS[index % COLORS.length]}
-                  />
-                ))}
-              </Pie>
-              <Tooltip /> {/* Displays data on hover */}
-            </PieChart>
-          </ResponsiveContainer>
-        </div>
-
-        <div className="lineChart">
-          <ResponsiveContainer width="100%" height={300}>
-            <LineChart
-              data={data}
-              margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-            >
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Line
-                type="monotone"
-                dataKey="sales"
-                stroke="#8884d8"
-                activeDot={{ r: 8 }}
-              />
-            </LineChart>
-          </ResponsiveContainer>
-        </div>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Line
+                  type="monotone"
+                  dataKey="sales"
+                  stroke="#8884d8"
+                  activeDot={{ r: 8 }}
+                />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
+        </section>
       </section>
     </div>
   );
