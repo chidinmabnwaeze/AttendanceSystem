@@ -7,6 +7,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+}
 
 body {
   font-family: inter;
@@ -120,9 +123,13 @@ transform:translate(2);
   margin: 0 auto;
   cursor: pointer;
 }
+.clock a {
+  color: white;
+  font-size: 14px;
+}
 .clock:hover {
-  opacity: 0.8;
-  transition: 0.6s ease-out;
+  opacity: 0.7;
+  transition: 0.8s ease-out;
 }
 
 .welcometext {

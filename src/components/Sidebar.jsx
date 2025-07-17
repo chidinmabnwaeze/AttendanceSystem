@@ -18,8 +18,8 @@ const Sidebar = () => {
         <p>ClockedIt</p>
       </div>
 
-      <button id="clock" className="clock" onClick="/clocking">
-        Clock in
+      <button id="clock" className="clock">
+        <a href="/clocking">Clock in</a>
       </button>
 
       {/* These are the side menu bars */}
@@ -30,7 +30,7 @@ const Sidebar = () => {
               location.pathname === "/dashboard" ? "active" : ""
             }`}
           >
-            <a id="menu-icon" className="menu-list" href="../clocking">
+            <a id="menu-icon" className="menu-list" href="../dashboard">
               <div className="stroke"> </div>
               <img className="menu-icon" src={Dash} alt="" />
               <p>Dashboard</p>
