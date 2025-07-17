@@ -107,8 +107,8 @@ th {
 }
 .staff-name {
   display: flex;
-  flex-direction: row;
   align-items: center;
+  gap: 10px;
 }
 .clocked {
   background-color: rgba(0, 205, 21, 1);

@@ -20,10 +20,8 @@ const Table = ({ userTable }) => {
           {userTable.map((tabb, index) => (
             <tr className="rows" key={index}>
               <td className="staff-name">
-                <span className="tt">
-                  <img className="userpic" src={tabb.img} alt="" />
-                  {tabb.name}
-                </span>
+                <img className="userpic" src={tabb.img} alt="" />
+                {tabb.name}
               </td>
               <td>{tabb.id}</td>
               <td>{tabb.email}</td>
