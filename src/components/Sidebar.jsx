@@ -18,7 +18,7 @@ const Sidebar = () => {
         <p>ClockedIt</p>
       </div>
 
-      <button id="clock" className="clock">
+      <button id="clock" className="clock" onClick="/clocking">
         Clock in
       </button>
 
@@ -27,7 +27,7 @@ const Sidebar = () => {
         <ul className="menu-items">
           <li
             className={`menu-list ${
-              location.pathname === "/clocking" ? "active" : ""
+              location.pathname === "/dashboard" ? "active" : ""
             }`}
           >
             <a id="menu-icon" className="menu-list" href="../clocking">

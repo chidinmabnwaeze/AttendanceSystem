@@ -1,6 +1,5 @@
 import React from "react";
 import userpic from "../assets/images/profile.png";
-import Notclocked from "../components/notclocked";
 
 const Table = () => {
   const tab = [
@@ -12,7 +11,7 @@ const Table = () => {
       role: "Frontend developer",
       status: "Leave",
       start: "2024-06-09",
-      end: "2024-10-15"
+      end: "2024-10-15",
     },
     {
       img: userpic,
@@ -22,7 +21,7 @@ const Table = () => {
       role: "Frontend developer",
       status: "Leave",
       start: "2024-06-09",
-      end: "2024-10-15"
+      end: "2024-10-15",
     },
 
     {
@@ -33,15 +32,13 @@ const Table = () => {
       role: "Backend developer",
       status: "Leave",
       start: "2024-06-09",
-      end: "2024-10-15"
-    }
-   
-    
+      end: "2024-10-15",
+    },
   ];
   return (
     <div>
-      <table className="staffTable" >
-        <tr className="table-head" >
+      <table className="staffTable">
+        <tr className="table-head">
           <th>Staff Name</th>
           <th>Card ID </th>
           <th>Email Address </th>

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import userpic from "../assets/images/profile.png";
-import notclocked from "./notclocked";
 
 const Table = ({ userTable }) => {
   return (
