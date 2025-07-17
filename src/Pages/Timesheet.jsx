@@ -16,10 +16,6 @@ const Timesheet = () => {
   //   setActiveTab(tab);
   // };
   const text = "Timesheet";
-  // const sub ="Clocked in";
-  // const sub1 ="Clocked late";
-  // const sub2 = "Off Today";
-  // const content = <Table/>
 
   const userTable = [
     {

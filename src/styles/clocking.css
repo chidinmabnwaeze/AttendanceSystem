@@ -75,11 +75,11 @@ body {
   display: flex;
 }
 .menu ul :hover {
-  background-color: #ebebeb;
+  background-color: #f7ecec;
   color: #e91be9;
 }
 .menu ul .active {
-  background-color: #ebebeb;
+  background-color: #f7ecec;
   color: #e91be9;
   border-left: 3px solid #e91be9;
 }
