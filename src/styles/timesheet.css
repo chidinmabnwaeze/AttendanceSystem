@@ -128,16 +128,14 @@ th {
   border-radius: 20px;
   padding: 5px;
 }
-/* .clockedstatus {
-  background-color: rgba(211, 255, 167, 0.33);
-} */
-.stat {
-  color: rgba(0, 205, 21, 1);
+.off {
+  background-color: rgba(152, 148, 148, 1);
+  color: white;
   display: flex;
+  justify-content: center;
   align-items: center;
-  border-radius: 4px;
-  background-color: rgba(184, 248, 121, 0.33);
-  width: 110px;
+  border-radius: 20px;
+  padding: 5px;
 }
 .circle {
   background-color: white;
@@ -145,48 +143,4 @@ th {
   width: 9px;
   height: 9px;
   margin-right: 6px;
-}
-.stat2 {
-  color: rgba(205, 0, 74, 1);
-  display: flex;
-  align-items: center;
-  border-radius: 4px;
-  background-color: rgba(255, 167, 167, 0.15);
-  /* width: 110px; */
-}
-.circle-not {
-  background-color: rgb(243, 162, 130);
-  border-radius: 4px;
-  width: 9px;
-  height: 9px;
-  margin-right: 6px;
-}
-
-.stat3 {
-  color: rgba(152, 148, 148, 1);
-  display: flex;
-  align-items: center;
-  border-radius: 4px;
-  background-color: rgba(152, 148, 148, 0.15);
-  width: 110px;
-}
-.circle-leave {
-  background-color: rgba(152, 148, 148, 1);
-  border-radius: 4px;
-  width: 9px;
-  height: 9px;
-  margin-right: 6px;
-}
-
-/* tablist styles */
-.tab-header {
-  display: flex;
-  color: rgba(130, 130, 130, 1);
-}
-.tab-menu {
-}
-.tab-item {
-  list-style: none;
-  margin: 15px;
-  cursor: pointer;
 }

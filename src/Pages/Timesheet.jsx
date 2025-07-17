@@ -6,18 +6,15 @@ import Table from "../components/Table";
 import searchIcon from "../assets/icons/Component 248.png";
 import Filter from "../assets/icons/funnel.png";
 import "../styles/timesheet.css";
-import Tablist from "../components/Tablist";
-import Table2 from "../components/Table2";
-import Off from "../components/Table4";
 import userpic from "../assets/images/profile.png";
 import { useState } from "react";
 
 const Timesheet = () => {
   const [search, setSearch] = useState("");
   const [activeTab, setActiveTab] = useState("All");
-  const changeTab = (tab) => {
-    setActiveTab(tab);
-  };
+  // const changeTab = (tab) => {
+  //   setActiveTab(tab);
+  // };
   const text = "Timesheet";
   // const sub ="Clocked in";
   // const sub1 ="Clocked late";
@@ -31,92 +28,107 @@ const Timesheet = () => {
       id: 23476,
       email: "example@gmail.com",
       role: "Frontend developer",
+      time: "8:30am",
       status: "Clocked in",
       date: "2024-06-09",
     },
     {
       img: userpic,
-      name: "Julius Gabriel",
+      name: "Ade Ola",
       id: 23476,
       email: "example@gmail.com",
       role: "Frontend developer",
+      time: "8:00am",
       status: "Clocked in",
       date: "2024-06-09",
     },
 
     {
       img: userpic,
-      name: "Julius Gabriel",
+      name: "James Bush",
       id: 23476,
       email: "example@gmail.com",
       role: "Backend developer",
-      status: "Clocked in",
+      time: "9:30am",
+      status: "Clocked late",
       date: "2024-06-09",
     },
     {
       img: userpic,
-      name: "Julius Gabriel",
+      name: "Kola Abioye",
       id: 23476,
       email: "example@gmail.com",
       role: "Frontend developer",
+      time: "",
       status: "Off today",
       date: "2024-06-09",
     },
     {
       img: userpic,
-      name: "Julius Gabriel",
+      name: "Onyeka Eze",
       id: 23476,
       email: "example@gmail.com",
       role: "UI/UX Designer",
+      time: "8:30am",
       status: "Clocked in",
       date: "2024-06-09",
     },
     {
       img: userpic,
-      name: "Julius Gabriel",
+      name: "Mary Onu",
       id: 23476,
       email: "example@gmail.com",
       role: "Frontend developer",
+      time: "8:30am",
       status: "Clocked in",
       date: "2024-06-09",
     },
     {
       img: userpic,
-      name: "Julius Gabriel",
+      name: "Stella Maris",
       id: 23476,
       email: "example@gmail.com",
       role: "Frontend developer",
+      time: "10:30am",
       status: "Clocked late",
       date: "2024-06-09",
     },
   ];
 
-  const filteredSearch = userTable.filter((tables) =>
-    Object.values(tables).join(" ").toLowerCase().includes(search.toLowerCase())
-  );
-  console.log(filteredSearch);
+  const filteredSearch = userTable.filter((tables) => {
+    //fetching two queries , 1 to track search
+    const matchSearch = Object.values(tables)
+      .join(" ")
+      .toLowerCase()
+      .includes(search.toLowerCase());
 
-  const statusFilter = userTable.filter((status) =>
-    `${status.status}`.toLowerCase().includes()
-  );
+    //2. to filter active tab based on status
+    const matchTab =
+      activeTab === "All" ||
+      tables.status.toLowerCase() === activeTab.toLowerCase();
 
-  console.log(statusFilter);
+    return matchSearch && matchTab;
+  });
+
   return (
     <div>
       <Header />
       <Sidebar />
+      <Title text={text} />
 
-      <Title
-        text={text}
-        // sub={sub}
-        // sub1={sub1}
-        // sub2={sub2}
-        // content ={content}
-      />
       <div className="page-tabBar">
         <div className="tab-buttons">
-          <span>{/* map tabs name together and filter active tabs */}</span>
-          <span
+          {/* map tabs name together and filter active tabs */}
+          {["All", "Clocked In", "Clocked Late", "Off Today"].map((tab) => (
+            <span
+              key={tab}
+              className={`${activeTab === tab ? "actives" : "tButton"}`}
+              onClick={() => setActiveTab(tab)}
+            >
+              {tab}
+            </span>
+          ))}
+          {/* <span
             className={`${activeTab === "All" ? "actives" : "tButton"}`}
             onClick={() => changeTab("All")}
           >
@@ -128,20 +140,7 @@ const Timesheet = () => {
           >
             Clocked in
           </span>
-          <span
-            className={`${
-              activeTab === "Clocked Late" ? "actives" : "tButton"
-            }`}
-            onClick={() => changeTab("Clocked Late")}
-          >
-            Clocked Late
-          </span>
-          <span
-            className={`${activeTab === "Off Today" ? "actives" : "tButton"}`}
-            onClick={() => changeTab("Off Today")}
-          >
-            Off Today
-          </span>
+         */}
         </div>
 
         <div className="right">
@@ -161,21 +160,9 @@ const Timesheet = () => {
       </div>
       <br />
       <div className="content">
-        {activeTab === "All" && (
-          <div>
-            <Table userTable={filteredSearch} statusFilter={statusFilter} />
-          </div>
-        )}
-        {activeTab === "Clocked Late" && (
-          <div>
-            <Table2 />
-          </div>
-        )}
-        {activeTab === "Off Today" && (
-          <div>
-            <Off />
-          </div>
-        )}
+        <div>
+          <Table userTable={filteredSearch} />
+        </div>
       </div>
     </div>
   );

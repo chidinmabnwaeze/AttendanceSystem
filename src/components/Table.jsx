@@ -3,8 +3,6 @@ import userpic from "../assets/images/profile.png";
 import notclocked from "./notclocked";
 
 const Table = ({ userTable }) => {
-  const [clockedStatus, setClockedStatus] = useState("");
-
   return (
     <div>
       <table className="staffTable">
@@ -37,10 +35,10 @@ const Table = ({ userTable }) => {
                   className={`${
                     tabb.status === "Clocked in"
                       ? "clocked"
-                      : tabb.status === "Clocked Late"
+                      : tabb.status === "Clocked late"
                       ? "late"
-                      : tabb.status === "Off Today"
-                      ? "leave"
+                      : tabb.status === "Off today"
+                      ? "off"
                       : ""
                   }`}
                 >
