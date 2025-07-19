@@ -15,8 +15,10 @@ import {
   CartesianGrid,
 } from "recharts";
 import { PieChart, Pie, Cell } from "recharts";
+import { useUser } from "../components/userContext";
 
 const Dashboard = () => {
+  const { userTable } = useUser();
   const count = [
     {
       title: "No of Total staff",
@@ -67,7 +69,7 @@ const Dashboard = () => {
                 </div>
                 <div className="box-number">
                   <p>{countCard.title}</p>
-                  <p className="number">{countCard.staffCount}</p>
+                  <p className="number">{userTable.length}</p>
                 </div>
               </div>
             </div>
