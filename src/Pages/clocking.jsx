@@ -8,7 +8,6 @@ import rafiki from "../assets/images/rafiki.png";
 const clocking = () => {
   const clock = new Date().toLocaleTimeString("en-NG", { hour12: true });
 
-  console.log(clock);
   const [currentTime, setCurrentTime] = useState(clock);
 
   const updateCurrentTime = () => {
