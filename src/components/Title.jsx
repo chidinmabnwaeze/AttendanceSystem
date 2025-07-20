@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import search from "../assets/icons/Component 248.png";
-import Filter from "../assets/icons/funnel.png";
-import Table from "./Table";
 
 const Title = ({ text, sub, sub1, sub2, content, content2 }) => {
   // const [toggle, setToggle] = useState(1);
