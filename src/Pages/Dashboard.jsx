@@ -19,21 +19,29 @@ import { useUser } from "../components/userContext";
 
 const Dashboard = () => {
   const { userTable } = useUser();
+  const total = userTable.length;
+  const presentStaff = userTable.filter(
+    (user) => (user.status === "Clocked in ") + (user.status === "Clocked late")
+  ).length;
+  const absentStaff = userTable.filter(
+    (user) => user.status === "Off today"
+  ).length;
+
   const count = [
     {
       title: "No of Total staff",
       img: usersIcon,
-      staffCount: 100,
+      staffCount: total,
     },
     {
       title: "No of Present Staff",
       img: usersIcon,
-      staffCount: 70,
+      staffCount: presentStaff,
     },
     {
       title: "No of Absent Staff",
       img: usersIcon,
-      staffCount: 20,
+      staffCount: absentStaff,
     },
     {
       title: "No of Staff on Leave",
@@ -69,7 +77,7 @@ const Dashboard = () => {
                 </div>
                 <div className="box-number">
                   <p>{countCard.title}</p>
-                  <p className="number">{userTable.length}</p>
+                  <p className="number">{countCard.staffCount}</p>
                 </div>
               </div>
             </div>
