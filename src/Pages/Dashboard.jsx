@@ -21,7 +21,9 @@ const Dashboard = () => {
   const { userTable } = useUser();
   const total = userTable.length;
   const presentStaff = userTable.filter(
-    (user) => (user.status === "Clocked in ") + (user.status === "Clocked late")
+    (user) =>
+      user.status.trim() === "Clocked in" ||
+      user.status.trim() === "Clocked late"
   ).length;
   const absentStaff = userTable.filter(
     (user) => user.status === "Off today"
