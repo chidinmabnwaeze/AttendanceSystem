@@ -65,3 +65,6 @@ textarea {
 .duration-input input {
   margin: 0 20px;
 }
+select {
+  width: 100%;
+}

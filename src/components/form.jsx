@@ -21,8 +21,11 @@ const form = () => {
         <div className="name">
           <label className="staff" htmlFor="name">
             Purpose of leave
-            {/* <input type="text" placeholder="Enter purpose of leave" /> */}
-            <select name="leave-purpose" id="">
+            <select
+              name="leave-purpose"
+              id=""
+              style={{ width: "500%", height: "50px" }}
+            >
               <option value=""></option>
               <option value="leave">Sick</option>
               <option value="leave">Annual</option>
