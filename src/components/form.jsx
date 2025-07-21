@@ -49,7 +49,16 @@ const form = () => {
         <div className="name">
           <label className="staff" htmlFor="name">
             Leave duration
-            <input type="text" />
+            <div className="duration-input">
+              <span>
+                From
+                <input type="date" />
+              </span>
+              <span>
+                To
+                <input type="date" />
+              </span>
+            </div>
           </label>
         </div>
 
