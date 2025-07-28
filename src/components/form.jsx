@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 
 const form = () => {
+  const [leaveForm, setLeaveForm] = useState({
+    name: "",
+    role: "",
+    purpose: "",
+    description: "",
+    start: "",
+    end: "",
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const value = e.target.value;
+    localStorage.setItem("leaveForm", value);
+    setLeaveForm(value);
+    alert("leave approved successfully");
+  };
   return (
     <div className="form-border">
-      <form action="">
+      <form>
         <div className="name">
           <label className="staff" htmlFor="name">
             Name of staff
@@ -12,14 +28,18 @@ const form = () => {
         </div>
 
         <div className="name">
-          <label className="staff" htmlFor="name">
+          <label className="staff" htmlFor="astaff">
             Staff Role
-            <input type="text" placeholder="Staff role" />
+            <input
+              type="text"
+              placeholder="Staff role"
+              value={leaveForm.name}
+            />
           </label>
         </div>
 
         <div className="name">
-          <label className="staff" htmlFor="name">
+          <label className="staff" htmlFor="purpose">
             Purpose of leave
             <select
               name="leave-purpose"
@@ -35,7 +55,7 @@ const form = () => {
         </div>
 
         <div className="name">
-          <label className="staff" htmlFor="name">
+          <label className="staff" htmlFor="description">
             Description
             <textarea
               type="textarea"
@@ -50,16 +70,16 @@ const form = () => {
         </div>
 
         <div className="name">
-          <label className="staff" htmlFor="name">
+          <label className="staff" htmlFor="leave">
             Leave duration
             <div className="duration-input">
               <span>
                 From
-                <input type="date" />
+                <input type="date" value={leaveForm.start} />
               </span>
               <span>
                 To
-                <input type="date" />
+                <input type="date" value={leaveForm} />
               </span>
             </div>
           </label>
@@ -67,7 +87,9 @@ const form = () => {
 
         <div className="formButtons">
           <button className="cancel">Cancel</button>
-          <button className="approve">Approve Leave</button>
+          <button className="approve" onClick={handleSubmit}>
+            Approve Leave
+          </button>
         </div>
       </form>
     </div>
