@@ -74,7 +74,7 @@ const LeaveForm = () => {
               value={leaveForm.purpose}
               onChange={handleChange}
             >
-              <option value="">Choose</option>
+              <option value="">Select an option</option>
               <option value="sick">Sick</option>
               <option value="annual">Annual</option>
               <option value="other">Other</option>
