@@ -3,6 +3,7 @@ import React, { useState } from "react";
 const LeaveForm = () => {
   const [leaveForm, setLeaveForm] = useState({
     name: "",
+    staffId: "",
     role: "",
     purpose: "",
     description: "",
@@ -17,11 +18,6 @@ const LeaveForm = () => {
     console.log(leaveForm);
   };
 
-  // const handleSelect = (e) => {
-  //   const value = e.target.value;
-  //   setLeaveForm((selectState) => [{ ...selectState, value: [value] }]);
-  // };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     localStorage.setItem("leaveForm", JSON.stringify(leaveForm));
@@ -29,6 +25,7 @@ const LeaveForm = () => {
     console.log(leaveForm);
     setLeaveForm({
       name: "",
+      staffId: "",
       role: "",
       purpose: "",
       description: "",

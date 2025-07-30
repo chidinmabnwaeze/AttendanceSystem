@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import "../styles/leave.css";
 import Filter from "../assets/icons/funnel.png";
-import Form from "../components/form";
+import LeaveForm from "../components/form";
 import Table from "../components/Table";
 import LeaveTable from "../components/Table3";
 
@@ -58,7 +58,7 @@ const leave = () => {
       <div className="content">
         {activeTab === "apply" && (
           <div>
-            <Form />
+            <LeaveForm />
           </div>
         )}
         {activeTab === "onLeave" && (
