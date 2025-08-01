@@ -40,9 +40,11 @@ const Table = ({ leaveData }) => {
             </tr>
           ))
         ) : (
-          <div className=" flex justify-center text-center">
-            No approved leave yet
-          </div>
+          <tr>
+            <td className="no-leave m-40 text-purple-400">
+              No approved leave yet
+            </td>
+          </tr>
         )}
       </table>
     </div>

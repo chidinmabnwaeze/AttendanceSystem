@@ -69,3 +69,9 @@ textarea {
 select {
   width: 100%;
 }
+.no-leave {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem;
+}
