@@ -6,6 +6,7 @@ import StaffSchedule from "../components/staffSchedule";
 import Searchbar from "../components/Searchbar";
 import search from "../assets/icons/Component 248.png";
 import Filter from "../assets/icons/funnel.png";
+import PayrollTable from "../components/PayrollTable";
 
 const Payroll = () => {
   const [activeTab, setActiveTab] = useState("staff");
@@ -59,7 +60,11 @@ const Payroll = () => {
       </div>
       <br />
       <div className="content">
-        {activeTab === "pay" && <div>payroll table</div>}
+        {activeTab === "pay" && (
+          <div>
+            <PayrollTable />
+          </div>
+        )}
         {activeTab === "staff" && (
           <div>
             <StaffSchedule />

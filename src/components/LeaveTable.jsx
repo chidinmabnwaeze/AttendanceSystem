@@ -7,7 +7,7 @@ const Table = ({ leaveData }) => {
       <table className="staffTable">
         <tr className="table-head">
           <th>Staff Name</th>
-          <th>Email Address </th>
+          <th> </th>
           <th>Role</th>
           <th>Purpose of Leave </th>
           <th>Description</th>
