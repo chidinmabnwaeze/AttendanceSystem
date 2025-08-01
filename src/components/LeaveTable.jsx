@@ -2,39 +2,6 @@ import React from "react";
 import userpic from "../assets/images/profile.png";
 
 const Table = ({ leaveData }) => {
-  const tab = [
-    {
-      img: userpic,
-      name: "Julius Gabriel",
-      id: 23476,
-      email: "example@gmail.com",
-      role: "Frontend developer",
-      status: "Leave",
-      start: "2024-06-09",
-      end: "2024-10-15",
-    },
-    {
-      img: userpic,
-      name: "Julius Gabriel",
-      id: 23476,
-      email: "example@gmail.com",
-      role: "Frontend developer",
-      status: "Leave",
-      start: "2024-06-09",
-      end: "2024-10-15",
-    },
-
-    {
-      img: userpic,
-      name: "Julius Gabriel",
-      id: 23476,
-      email: "example@gmail.com",
-      role: "Backend developer",
-      status: "Leave",
-      start: "2024-06-09",
-      end: "2024-10-15",
-    },
-  ];
   return (
     <div>
       <table className="staffTable">
