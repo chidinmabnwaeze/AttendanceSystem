@@ -7,10 +7,10 @@ const Table = ({ leaveData }) => {
       <table className="staffTable">
         <tr className="table-head">
           <th>Staff Name</th>
-          <th>Card ID </th>
           <th>Email Address </th>
           <th>Role</th>
-          <th>Status </th>
+          <th>Purpose of Leave </th>
+          <th>Description</th>
           <th>Start Date </th>
           <th>End Date </th>
         </tr>
@@ -24,24 +24,25 @@ const Table = ({ leaveData }) => {
                   {tabb.name}
                 </span>
               </td>
-              <td>{tabb.id}</td>
-              <td>{tabb.email}</td>
+              <td>{tabb.staffId}</td>
               <td>{tabb.role}</td>
               <td className="staff-status">
                 <div className="clockedStatus">
                   <span className="stat3">
                     <div className="circle-leave"></div>
-
-                    {tabb.status}
+                    {tabb.purpose}
                   </span>
                 </div>
               </td>
+              <td>{tabb.description}</td>
               <td>{tabb.start}</td>
               <td>{tabb.end}</td>
             </tr>
           ))
         ) : (
-          <div>No approved leave yet</div>
+          <div className=" flex justify-center text-center">
+            No approved leave yet
+          </div>
         )}
       </table>
     </div>

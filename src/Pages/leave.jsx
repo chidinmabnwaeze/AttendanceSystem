@@ -15,8 +15,6 @@ const leave = () => {
     setActiveTab(tab);
   };
   const text = "Leave";
-  // const apply ="Apply"
-  // const onLeave = "On Leave"
 
   const handleSubmit = (formData) => {
     setLeaveData((prev) => [...prev, formData]);
@@ -26,11 +24,7 @@ const leave = () => {
     <div>
       <Header />
       <Sidebar />
-      <Title
-        text={text}
-        //  sub={apply}
-        // sub1 ={onLeave}
-      />
+      <Title text={text} />
 
       <div className="page-tabBar">
         <div className="tab-buttons">
