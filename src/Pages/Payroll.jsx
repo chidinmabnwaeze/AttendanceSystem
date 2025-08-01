@@ -14,9 +14,7 @@ const Payroll = () => {
     setActiveTab(tab);
   };
   const text = "Payroll";
-  // const sub = "Payroll"
-  // const sub1 = "Staff Schedule"
-  // const content2 =  <StaffSchedule/>
+
   return (
     <div>
       <Header />
