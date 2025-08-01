@@ -19,12 +19,7 @@ const Payroll = () => {
     <div>
       <Header />
       <Sidebar />
-      <Title
-        text={text}
-        //   sub={sub}
-        //   sub1={sub1}
-        //   content2={content2}
-      />
+      <Title text={text} />
 
       <div className="page-tabBar">
         <div className="tab-buttons">
