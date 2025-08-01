@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const LeaveForm = () => {
+const LeaveForm = ({ onSubmit }) => {
   const [leaveForm, setLeaveForm] = useState({
     name: "",
     staffId: "",
@@ -20,6 +20,7 @@ const LeaveForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    onSubmit(leaveForm);
     localStorage.setItem("leaveForm", JSON.stringify(leaveForm));
     alert("leave approved successfully");
     console.log(leaveForm);

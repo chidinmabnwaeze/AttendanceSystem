@@ -6,16 +6,22 @@ import "../styles/leave.css";
 import Filter from "../assets/icons/funnel.png";
 import LeaveForm from "../components/form";
 import Table from "../components/Table";
-import LeaveTable from "../components/Table3";
+import LeaveTable from "../components/LeaveTable";
 
 const leave = () => {
   const [activeTab, setActiveTab] = useState("apply");
+  const [leaveData, setLeaveData] = useState([]);
   const changeTab = (tab) => {
     setActiveTab(tab);
   };
   const text = "Leave";
   // const apply ="Apply"
   // const onLeave = "On Leave"
+
+  const handleSubmit = (formData) => {
+    setLeaveData((prev) => [...prev, formData]);
+  };
+
   return (
     <div>
       <Header />
@@ -58,12 +64,12 @@ const leave = () => {
       <div className="content">
         {activeTab === "apply" && (
           <div>
-            <LeaveForm />
+            <LeaveForm onSubmit={handleSubmit} />
           </div>
         )}
         {activeTab === "onLeave" && (
           <div>
-            <LeaveTable />
+            <LeaveTable leaveData={leaveData} />
           </div>
         )}
       </div>
