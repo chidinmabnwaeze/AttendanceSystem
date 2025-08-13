@@ -7,7 +7,7 @@ import searchIcon from "../assets/icons/Component 248.png";
 import Filter from "../assets/icons/funnel.png";
 import "../styles/timesheet.css";
 import userpic from "../assets/images/profile.png";
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import { useUser } from "../components/userContext";
 
 const Timesheet = () => {
@@ -33,6 +33,19 @@ const Timesheet = () => {
 
     return matchSearch && matchTab;
   });
+
+  const [staff, setStaff ] = useState([]);
+  
+  useEffect(()=>{
+  try{
+  fetch("https://jsonplaceholder.typicode.com/users")
+  .then(response => response.json())
+  .then(data => setStaff(data))
+}catch(error){
+  console.error("error:", error)
+}
+console.log(staff)
+  },[])
 
   return (
     <div>

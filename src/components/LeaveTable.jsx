@@ -1,7 +1,52 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import userpic from "../assets/images/profile.png";
 
 const Table = ({ leaveData }) => {
+  const [leave, setLeave] = useState([]);
+  const [leaveList, setLeaveList] = useState([])
+
+useEffect(()=>{
+     const savedData = JSON.parse(localStorage.getItem("leaveData") || [])
+   setLeaveList(savedData) 
+},[])
+
+  useEffect(() => {
+    const postLeave = async () => {
+      try {
+        fetch("https://jsonplaceholder.typicode.com/users", {
+          method: "POST",
+          headers: "Content-Type: application-json",
+          body: {
+            ...leave,
+            role: "",
+            purpose: "",
+            description: "",
+            start: "",
+            end: "",
+          },
+        });
+        setLeave(leave);
+        setLeave({
+             role: "",
+            purpose: "",
+            description: "",
+            start: "",
+            end: "",
+        })
+      } catch (error) {
+        console.error("Error:", error);
+      }
+      postLeave();
+    };
+  }, []);
+  console.log(leave);
+
+  useEffect(()=>{
+   const savedData = JSON.parse(localStorage.getItem("leaveData") || [])
+   localStorage.setItem("leaveData", JSON.stringify(leaveData))
+   setLeaveList(savedData) 
+  },[])
+
   return (
     <div>
       <table className="staffTable">
@@ -15,8 +60,8 @@ const Table = ({ leaveData }) => {
           <th>End Date </th>
         </tr>
 
-        {leaveData.length > 0 ? (
-          leaveData.map((tabb, index) => (
+        {leaveList.length > 0 ? (
+          leaveList.map((tabb, index) => (
             <tr className="rows" key={index}>
               <td className="staff-name">
                 <span className="tt">
