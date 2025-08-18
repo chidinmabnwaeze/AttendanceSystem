@@ -1,15 +1,7 @@
 import React, { useState } from "react";
 
 const LeaveForm = ({ onSubmit }) => {
-  const [leaveForm, setLeaveForm] = useState({
-    name: "",
-    staffId: "",
-    role: "",
-    purpose: "",
-    description: "",
-    start: "",
-    end: "",
-  });
+  const [leaveForm, setLeaveForm] = useState({});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,15 +16,6 @@ const LeaveForm = ({ onSubmit }) => {
     localStorage.setItem("leaveForm", JSON.stringify(leaveForm));
     alert("leave approved successfully");
     console.log(leaveForm);
-    setLeaveForm({
-      name: "",
-      staffId: "",
-      role: "",
-      purpose: "",
-      description: "",
-      start: "",
-      end: "",
-    });
   };
   return (
     <div className="form-border">
@@ -44,7 +27,6 @@ const LeaveForm = ({ onSubmit }) => {
               type="text"
               name="name"
               placeholder="Staff name"
-              value={leaveForm.name}
               onChange={handleChange}
             />
           </label>
@@ -57,7 +39,6 @@ const LeaveForm = ({ onSubmit }) => {
               type="text"
               name="role"
               placeholder="Staff role"
-              value={leaveForm.role}
               onChange={handleChange}
             />
           </label>
@@ -69,7 +50,6 @@ const LeaveForm = ({ onSubmit }) => {
             <select
               name="purpose"
               style={{ width: "500%", height: "50px" }}
-              value={leaveForm.purpose}
               onChange={handleChange}
             >
               <option value="">Select an option</option>
@@ -91,7 +71,6 @@ const LeaveForm = ({ onSubmit }) => {
               id="staff"
               rows={10}
               cols={80}
-              value={leaveForm.description}
               onChange={handleChange}
             />
           </label>
@@ -106,7 +85,6 @@ const LeaveForm = ({ onSubmit }) => {
                 <input
                   type="date"
                   name="start"
-                  value={leaveForm.start}
                   onChange={handleChange}
                 />
               </span>
@@ -115,7 +93,6 @@ const LeaveForm = ({ onSubmit }) => {
                 <input
                   type="date"
                   name="end"
-                  value={leaveForm.end}
                   onChange={handleChange}
                 />
               </span>

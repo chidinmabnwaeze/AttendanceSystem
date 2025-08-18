@@ -5,46 +5,47 @@ const Table = ({ leaveData }) => {
   const [leave, setLeave] = useState([]);
   const [leaveList, setLeaveList] = useState([])
 
-useEffect(()=>{
-     const savedData = JSON.parse(localStorage.getItem("leaveData") || [])
-   setLeaveList(savedData) 
-},[])
+  useEffect(()=>{
+    const savedData = JSON.parse(localStorage.getItem("leaveData")) || []
+    setLeaveList(savedData) 
+  },[])
 
   useEffect(() => {
     const postLeave = async () => {
       try {
-        fetch("https://jsonplaceholder.typicode.com/users", {
-          method: "POST",
-          headers: "Content-Type: application-json",
-          body: {
-            ...leave,
-            role: "",
-            purpose: "",
-            description: "",
-            start: "",
-            end: "",
-          },
-        });
-        setLeave(leave);
+        // fetch("https://jsonplaceholder.typicode.com/users", {
+        //   method: "GET",
+        //   headers: {"Content-Type": "application-json"},
+        //   body: JSON.stringify({
+        //     ...leave,
+        //     role: "",
+        //     purpose: "",
+        //     description: "",
+        //     start: "",
+        //     end: "",
+        //   }),
+        // });
         setLeave({
-             role: "",
-            purpose: "",
-            description: "",
-            start: "",
-            end: "",
+          role: "",
+          purpose: "",
+          description: "",
+          start: "",
+          end: "",
         })
       } catch (error) {
         console.error("Error:", error);
       }
-      postLeave();
+    
     };
+    postLeave();
   }, []);
-  console.log(leave);
+  // console.log(leave);
 
   useEffect(()=>{
-   const savedData = JSON.parse(localStorage.getItem("leaveData") || [])
-   localStorage.setItem("leaveData", JSON.stringify(leaveData))
-   setLeaveList(savedData) 
+    if (leaveData && leaveData.length > 0){
+      localStorage.setItem("leaveData", JSON.stringify(leaveData))
+      setLeaveList(leaveData) 
+    }
   },[])
 
   return (
