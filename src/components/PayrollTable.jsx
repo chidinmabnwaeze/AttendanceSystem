@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import userpic from "../assets/images/profile.png";
+import { useUser } from "./userContext";
 
 const PayrollTable = () => {
   const payTable = [
@@ -82,6 +83,33 @@ const PayrollTable = () => {
       date: "2024-06-09",
     },
   ];
+
+  // revise here
+  const { userTable } = useUser();
+
+  const EachUserData = userTable.reduce((newData, previousData) => {
+    if (!newData[previousData.id]) {
+      [{ ...previousData, clockedin: 0, clockedLate: 0, off: 0 }];
+    }
+
+    if (previousData.status === "Clocked in") {
+      num;
+    }
+  });
+
+  let numDays = 22;
+  const dailyPay = 5600;
+  const getDays = () => {
+    let num = 0;
+    if (userTable.status === "ClockedIn") {
+      num++;
+    } else if (userTable.status === "ClockedLate") {
+      num -= 1;
+    }
+  };
+
+  let TotalSalary = Number(numDays * dailyPay);
+
   return (
     <div>
       <table className="staffTable">
@@ -110,22 +138,7 @@ const PayrollTable = () => {
               <td>{tabb.role}</td>
               <td>{tabb.abTime}</td>
               <td>{tabb.prTime}</td>
-              <td className="staff-status">
-                <div
-                  className={`${
-                    tabb.status === "200,000"
-                      ? "clocked"
-                      : tabb.status === "Clocked late"
-                      ? "late"
-                      : tabb.status === "Off today"
-                      ? "off"
-                      : ""
-                  }`}
-                >
-                  <div className="circle"></div>
-                  {tabb.salary}
-                </div>
-              </td>
+              <td>{TotalSalary}</td>
 
               <td>{tabb.date}</td>
               <td>...</td>

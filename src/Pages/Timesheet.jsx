@@ -34,18 +34,18 @@ const Timesheet = () => {
     return matchSearch && matchTab;
   });
 
-  const [staff, setStaff ] = useState([]);
+//   const [staff, setStaff ] = useState([]);
   
-  useEffect(()=>{
-  try{
-  fetch("https://jsonplaceholder.typicode.com/users")
-  .then(response => response.json())
-  .then(data => setStaff(data))
-}catch(error){
-  console.error("error:", error)
-}
-console.log(staff)
-  },[])
+//   useEffect(()=>{
+//   try{
+//   fetch("https://jsonplaceholder.typicode.com/users")
+//   .then(response => response.json())
+//   .then(data => setStaff(data))
+// }catch(error){
+//   console.error("error:", error)
+// }
+// // console.log(staff)
+//   },[])
 
   return (
     <div>
