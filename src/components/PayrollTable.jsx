@@ -86,6 +86,7 @@ const PayrollTable = () => {
 
   // revise here
   const { userTable } = useUser();
+  const { attendanceTable } = useUser();
 
   // const EachUserData = userTable.reduce((newData, previousData) => {
   //   if (!newData[previousData.id]) {
@@ -99,8 +100,25 @@ const PayrollTable = () => {
   //   } else {
   //     newData[previousData].status++;
   //   }
-  //   return 
+  //   return
   // });
+
+  let present = 0;
+  let absent = 0;
+
+  const calculateDays = () => {
+    if (attendanceTable.status === "Clocked in") {
+      present++;
+    }
+    if (attendanceTable.status === "Clocked late") {
+      absent++;
+    }
+    if (attendanceTable.status === "Off today") {
+      absent++;
+    }
+
+    return present, absent; 
+  };
 
   let numDays = 22;
   const dailyPay = 5600;
@@ -113,15 +131,8 @@ const PayrollTable = () => {
     }
   };
 
-[payTable].abTime
+  [payTable].abTime;
   let TotalSalary = numDays * dailyPay;
-
-
-  const calculateDays = ()=>{
-    if (a){
-
-    }
-  }
 
   return (
     <div>
@@ -149,8 +160,8 @@ const PayrollTable = () => {
               <td>{tabb.id}</td>
               <td>{tabb.email}</td>
               <td>{tabb.role}</td>
-              <td>{tabb.abTime}</td>
-              <td>{tabb.prTime}</td>
+              <td>{calculateDays(absent)}</td>
+              <td>{calculateDays(present)}</td>
               <td>{TotalSalary}</td>
 
               <td>{tabb.date}</td>
