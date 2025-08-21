@@ -10,9 +10,9 @@ const PayrollTable = () => {
       id: 3476,
       email: "example@gmail.com",
       role: "Frontend developer",
-      abTime: "8",
-      prTime: "17",
-      salary: "200,000",
+      abTime: 8,
+      prTime: 17,
+      salary: 200000,
       date: "2024-06-09",
     },
     {
@@ -21,8 +21,8 @@ const PayrollTable = () => {
       id: 2346,
       email: "example@gmail.com",
       role: "Frontend developer",
-      abTime: "5",
-      prTime: "20",
+      abTime: 5,
+      prTime: 20,
       salary: "200,000",
       date: "2024-06-09",
     },
@@ -45,7 +45,7 @@ const PayrollTable = () => {
       email: "example@gmail.com",
       role: "Frontend developer",
       abTime: "18",
-      prTime: "19",
+      prTime: 19,
       salary: "Off today",
       date: "2024-06-09",
     },
@@ -87,15 +87,20 @@ const PayrollTable = () => {
   // revise here
   const { userTable } = useUser();
 
-  const EachUserData = userTable.reduce((newData, previousData) => {
-    if (!newData[previousData.id]) {
-      [{ ...previousData, clockedin: 0, clockedLate: 0, off: 0 }];
-    }
+  // const EachUserData = userTable.reduce((newData, previousData) => {
+  //   if (!newData[previousData.id]) {
+  //     [{ ...previousData, clockedIn: 0, clockedLate: 0, off: 0 }];
+  //   }
 
-    if (previousData.status === "Clocked in") {
-      num;
-    }
-  });
+  //   if (previousData.status === "Clocked in") {
+  //     newData[previousData].clockedIn += 1;
+  //   } else if (previousData.status === "Clocked late") {
+  //     newData[previousData].clockedLate += 1;
+  //   } else {
+  //     newData[previousData].status++;
+  //   }
+  //   return 
+  // });
 
   let numDays = 22;
   const dailyPay = 5600;
@@ -108,7 +113,15 @@ const PayrollTable = () => {
     }
   };
 
-  let TotalSalary = Number(numDays * dailyPay);
+[payTable].abTime
+  let TotalSalary = numDays * dailyPay;
+
+
+  const calculateDays = ()=>{
+    if (a){
+
+    }
+  }
 
   return (
     <div>
