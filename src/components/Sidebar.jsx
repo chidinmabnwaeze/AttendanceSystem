@@ -13,17 +13,11 @@ import { useSidebar } from "./sidebarContext";
 const Sidebar = () => {
   const location = useLocation();
 
-  const [openMenu, setOpenMenu] = useState(true);
-
-  const collapseMenu = () => {
-    setOpenMenu((prev) => !prev);
-  };
-
   const { toggleSidebar, isSidebarOpen } = useSidebar();
 
   return (
     <nav className={`sidebar ${isSidebarOpen ? "" : "collapse"}`}>
-      <div className="collapseMenu" onClick={toggleSidebar}>
+      <div className="" onClick={toggleSidebar}>
         <SidebarClose />
       </div>
       <div className="logo">

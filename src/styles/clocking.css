@@ -28,7 +28,9 @@ body {
   margin-right: 20px;
   color: rgb(67, 67, 67);
 }
-
+.collapseMenu {
+  display: none;
+}
 .sidebar {
   background-color: #e91be925;
   display: flex;
@@ -338,12 +340,13 @@ transform:translate(2);
   }
   .collapseMenu {
     cursor: pointer;
+    display: flex;
   }
-  .collapse {
+  /* .collapse {
     display: none;
-  }
+  } */
   .sidebar {
-    display: none;
+    /* display: none; */
     background-color: #ffff;
     box-shadow: 0px 0px 5px rgb(67, 67, 67);
     display: flex;
