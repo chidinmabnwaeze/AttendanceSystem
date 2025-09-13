@@ -342,9 +342,9 @@ transform:translate(2);
     cursor: pointer;
     display: flex;
   }
-  /* .collapse {
+  .collapse {
     display: none;
-  } */
+  }
   .sidebar {
     /* display: none; */
     background-color: #ffff;
@@ -361,5 +361,9 @@ transform:translate(2);
   }
   body {
     margin-left: 0;
+  }
+  .illustration {
+    flex-direction: column-reverse;
+    display: none;
   }
 }

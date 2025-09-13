@@ -16,8 +16,8 @@ const Sidebar = () => {
   const { toggleSidebar, isSidebarOpen } = useSidebar();
 
   return (
-    <nav className={`sidebar ${isSidebarOpen ? "" : "collapse"}`}>
-      <div className="" onClick={toggleSidebar}>
+    <nav className={`sidebar ${isSidebarOpen ? "collapse" : ""}`}>
+      <div className="collapseMenu" onClick={toggleSidebar}>
         <SidebarClose />
       </div>
       <div className="logo">
