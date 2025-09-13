@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../assets/Logo/clock logo.png";
 import Dash from "../assets/icons/dashboard-square-02.svg";
 import Timesheet from "../assets/icons/vuesax/linear/calendar.svg";
@@ -7,12 +7,22 @@ import Payroll from "../assets/icons/invoice-03.svg";
 import Reports from "../assets/icons/waterfall-up-01.svg";
 import leaveIcon from "../assets/icons/leave-user.png";
 import { useLocation } from "react-router-dom";
+import { Menu } from "lucide-react";
 
 const Sidebar = () => {
   const location = useLocation();
 
+  const [openMenu, setOpenMenu] = useState(true);
+
+  const collapseMenu = () => {
+    setOpenMenu((prev) => !prev);
+  };
+
   return (
-    <nav className="sidebar">
+    <nav className={`sidebar ${openMenu ? "" : "collapse"}`}>
+      <div className="collapseMenu" onClick={collapseMenu}>
+        <Menu />
+      </div>
       <div className="logo">
         {/* <img src={Logo} alt="" /> */}
         <p>ClockedIt</p>

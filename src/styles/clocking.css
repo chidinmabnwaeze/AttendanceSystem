@@ -24,7 +24,6 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-
 .header-text {
   margin-right: 20px;
   color: rgb(67, 67, 67);
@@ -41,7 +40,6 @@ body {
   left: 0;
   top: 0;
 }
-
 .logo {
   margin: 3rem;
   display: flex;
@@ -199,7 +197,6 @@ transform:translate(2);
   border: 1px solid #e91be9;
   height: 100%;
   border-radius: 10px;
-
   position: relative;
 }
 .scanner img {
@@ -218,16 +215,6 @@ transform:translate(2);
   justify-content: space-between;
   align-items: center;
   margin: 0 3rem;
-}
-
-/* responsiveness */
-@media only screen and (max-width: 900px) {
-  .section1 {
-    flex-direction: column;
-  }
-  .timebuttons {
-    width: 400px;
-  }
 }
 
 /* popup css*/
@@ -268,10 +255,7 @@ transform:translate(2);
   margin-top: 8px;
   color: rgba(168, 168, 168, 1);
 }
-/* .userDetails{
-   
-  
-} */
+
 .userInfo {
   padding: 20px;
   display: flex;
@@ -342,4 +326,40 @@ transform:translate(2);
   align-items: center;
   margin: 0 auto;
   padding: 40px;
+}
+
+/* responsiveness */
+@media only screen and (max-width: 900px) {
+  .section1 {
+    flex-direction: column;
+  }
+  .timebuttons {
+    width: 400px;
+  }
+  .collapseMenu {
+    cursor: pointer;
+  }
+  .collapse {
+    display: none;
+  }
+  .sidebar {
+    display: none;
+    background-color: #e91be925;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    width: 100%;
+    height: 50%;
+    z-index: 100;
+    top: 0;
+  }
+  .main-clocking {
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0;
+  }
+  body {
+    margin-left: 0;
+  }
 }
