@@ -7,7 +7,8 @@ import Payroll from "../assets/icons/invoice-03.svg";
 import Reports from "../assets/icons/waterfall-up-01.svg";
 import leaveIcon from "../assets/icons/leave-user.png";
 import { useLocation } from "react-router-dom";
-import { Menu } from "lucide-react";
+import { Menu, SidebarClose, SidebarCloseIcon } from "lucide-react";
+import { useSidebar } from "./sidebarContext";
 
 const Sidebar = () => {
   const location = useLocation();
@@ -18,10 +19,12 @@ const Sidebar = () => {
     setOpenMenu((prev) => !prev);
   };
 
+  const { toggleSidebar, isSidebarOpen } = useSidebar();
+
   return (
-    <nav className={`sidebar ${openMenu ? "" : "collapse"}`}>
-      <div className="collapseMenu" onClick={collapseMenu}>
-        <Menu />
+    <nav className={`sidebar ${isSidebarOpen ? "" : "collapse"}`}>
+      <div className="collapseMenu" onClick={toggleSidebar}>
+        <SidebarClose />
       </div>
       <div className="logo">
         {/* <img src={Logo} alt="" /> */}
