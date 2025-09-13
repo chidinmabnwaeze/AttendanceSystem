@@ -7,7 +7,7 @@ import Payroll from "../assets/icons/invoice-03.svg";
 import Reports from "../assets/icons/waterfall-up-01.svg";
 import leaveIcon from "../assets/icons/leave-user.png";
 import { useLocation } from "react-router-dom";
-import { Menu, SidebarClose, SidebarCloseIcon } from "lucide-react";
+import { SidebarClose } from "lucide-react";
 import { useSidebar } from "./sidebarContext";
 
 const Sidebar = () => {
