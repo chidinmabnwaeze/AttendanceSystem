@@ -52,13 +52,13 @@ const Dashboard = () => {
     },
   ];
   const data = [
-    { name: "Jan", sales: 4000 },
-    { name: "Feb", sales: 3000 },
-    { name: "Mar", sales: 2000 },
-    { name: "Apr", sales: 2780 },
-    { name: "May", sales: 1890 },
-    { name: "Jun", sales: 2390 },
-    { name: "Jul", sales: 3490 },
+    { name: "Jan", attendance: 4000 },
+    { name: "Feb", attendance: 3000 },
+    { name: "Mar", attendance: 2000 },
+    { name: "Apr", attendance: 2780 },
+    { name: "May", attendance: 1890 },
+    { name: "Jun", attendance: 2390 },
+    { name: "Jul", attendance: 3490 },
   ];
 
   const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"]; // Define colors for slices
@@ -88,11 +88,12 @@ const Dashboard = () => {
 
         <section className="charts">
           <div className="pieChart">
+            <h1>Average Employee Attendance Rate</h1>
             <ResponsiveContainer width="100%" height={400}>
               <PieChart>
                 <Pie
                   data={data}
-                  dataKey="sales" // Key for the value of each slice
+                  dataKey="attendance" // Key for the value of each slice
                   nameKey="name" // Key for the name/label of each slice
                   cx="50%" // X-coordinate of the center
                   cy="50%" // Y-coordinate of the center
@@ -113,6 +114,7 @@ const Dashboard = () => {
           </div>
 
           <div className="lineChart">
+            <h1 className="m-3">Total Staff Attendance</h1>
             <ResponsiveContainer width="100%" height={400}>
               <LineChart
                 data={data}
@@ -125,7 +127,7 @@ const Dashboard = () => {
                 <Legend fill="#e91be9" />
                 <Line
                   type="monotone"
-                  dataKey="sales"
+                  dataKey="attendance"
                   stroke="#e91be9"
                   activeDot={{ r: 8 }}
                 />
