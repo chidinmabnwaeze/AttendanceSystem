@@ -63,6 +63,24 @@ const Dashboard = () => {
 
   const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"]; // Define colors for slices
 
+  const activity = [
+    {
+      action: "Amanda just clocked in",
+      time: "9:00am Mon 16th Sept",
+    },
+    {
+      action: "Amanda just clocked in",
+      time: "9:00am Mon 16th Sept",
+    },
+    {
+      action: "2 weeks leave approved for Deborah",
+      time: "9:00am Mon 16th Sept",
+    },
+    {
+      action: "Josh just clocked in",
+      time: "9:00am Mon 16th Sept",
+    },
+  ];
   return (
     <div className="hero">
       <Header />
@@ -140,6 +158,12 @@ const Dashboard = () => {
           <div>
             <h1>Recent Activities</h1>
           </div>
+          {activity.map((log, index) => (
+            <div className="logs" key={index}>
+              <p>{log.action}</p>
+              <p className="log-time">{log.time}</p>
+            </div>
+          ))}
         </section>
       </section>
     </div>

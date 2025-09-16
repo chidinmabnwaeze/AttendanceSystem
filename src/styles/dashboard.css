@@ -45,6 +45,15 @@
   border-radius: 10px;
   height: 400px;
 }
+.logs {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.2rem;
+}
+.log-time {
+  font-size: 14px;
+  color: grey;
+}
 
 /* responsiveness */
 @media only screen and (max-width: 900px) {
@@ -59,8 +68,9 @@
     flex-direction: column;
   }
   .pieChart,
-  .lineChart {
-    margin: 0;
+  .lineChart,
+  .recents {
+    margin: 20px 0;
     width: 100%;
   }
 }

@@ -54,6 +54,7 @@
 .filterButton {
   background-color: white;
   border: none;
+  cursor: pointer;
 }
 .filter {
   background-color: none;
@@ -144,4 +145,12 @@ th {
   width: 9px;
   height: 9px;
   margin-right: 6px;
+}
+
+/* responsiveness */
+@media only screen and (max-width: 900px) {
+  .page-tabBar {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
