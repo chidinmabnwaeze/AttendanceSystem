@@ -67,11 +67,39 @@ textarea {
   margin: 0 20px;
 }
 select {
-  width: 100%;
+  width: 500%;
+  height: 50px;
 }
 .no-leave {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 3rem;
+}
+
+/* responsiveness */
+@media only screen and (max-width: 900px) {
+  /* .staff input {
+    width: 150%;
+  } */
+  .name input {
+    width: 200%;
+  }
+  .name {
+    margin: 50px 20px;
+  }
+
+  textarea {
+    width: 100%;
+  }
+  select {
+    width: 250%;
+  }
+  .duration-input {
+    display: flex;
+    flex-direction: column;
+  }
+  .duration-input input {
+    width: 60%;
+  }
 }

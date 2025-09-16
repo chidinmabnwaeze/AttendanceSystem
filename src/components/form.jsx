@@ -49,7 +49,8 @@ const LeaveForm = ({ onSubmit }) => {
             Purpose of leave
             <select
               name="purpose"
-              style={{ width: "500%", height: "50px" }}
+              className="select"
+              // style={{ width: "500%", height: "50px" }}
               onChange={handleChange}
             >
               <option value="">Select an option</option>
@@ -82,19 +83,11 @@ const LeaveForm = ({ onSubmit }) => {
             <div className="duration-input">
               <span>
                 From
-                <input
-                  type="date"
-                  name="start"
-                  onChange={handleChange}
-                />
+                <input type="date" name="start" onChange={handleChange} />
               </span>
               <span>
                 To
-                <input
-                  type="date"
-                  name="end"
-                  onChange={handleChange}
-                />
+                <input type="date" name="end" onChange={handleChange} />
               </span>
             </div>
           </label>
