@@ -153,4 +153,7 @@ th {
     display: flex;
     flex-direction: column-reverse;
   }
+  .right input {
+    width: 400px;
+  }
 }

@@ -117,3 +117,10 @@ th {
 /* .sumButtons{
     display: flex;
   } */
+
+/* responsiveness */
+@media only screen and (max-width: 900px) {
+  .tButton {
+    margin: 10px;
+  }
+}
