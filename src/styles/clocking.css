@@ -368,4 +368,8 @@ transform:translate(2);
   .illustration {
     display: none;
   }
+  .timebuttons {
+  margin-right: 0;
+}
+
 }

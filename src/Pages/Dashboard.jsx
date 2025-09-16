@@ -106,7 +106,7 @@ const Dashboard = () => {
 
         <section className="charts">
           <div className="pieChart">
-            <h1>Average Employee Attendance Rate</h1>
+            <h2>Average Employee Attendance Rate</h2>
             <ResponsiveContainer width="100%" height={400}>
               <PieChart>
                 <Pie
@@ -132,7 +132,7 @@ const Dashboard = () => {
           </div>
 
           <div className="lineChart">
-            <h1 className="m-3">Total Staff Attendance</h1>
+            <h2 className="m-3">Total Staff Attendance</h2>
             <ResponsiveContainer width="100%" height={400}>
               <LineChart
                 data={data}
